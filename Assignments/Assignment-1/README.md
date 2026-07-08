@@ -50,23 +50,24 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
----
+## 📸 Screenshots
 
-## Screenshots
+### 🏠 Home Screen
 
-### Home Screen
+Displays the initial interface where users can enter their name and message before submitting.
 
-(Add image)
-
-### Successful Transmission
-
-(Add image)
-
-### Validation Example
-
-(Add image)
+![Home Screen](screenshots/home.png)
 
 ---
+
+### ✅ Successful Transmission
+
+Shows the personalized success message along with the estimated AI token consumption after a valid submission.
+
+![Successful Transmission](screenshots/success.png)
+
+---
+
 
 ## Concepts Covered
 
