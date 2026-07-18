@@ -72,6 +72,7 @@ Assignment-5/
 │
 ├── assignment5.py      # Main Streamlit application
 ├── README.md
+├── requirements.txt    
 └── demo/               # Project demonstration video
 ```
 
