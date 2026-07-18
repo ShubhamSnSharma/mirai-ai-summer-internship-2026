@@ -13,7 +13,7 @@ mirai-ai-summer-internship-2026/
 │
 ├── Assignment-01-The-Identity-Echo/
 ├── Assignment-02-AI-Multiverse/
-├── Assignment-03/
+├── Assignment-03/The-Memory-Vault/
 ├── Assignment-04/
 ├── Assignment-05/
 └── Final-Project/
