@@ -38,9 +38,9 @@ Each assignment is organized in its own folder and contains:
 |------------|-------------------------------|:------:|
 | 01 | The Identity Echo Interface | ✅ |
 | 02 | AI Multiverse Interface | ✅ |
-| 03 | Coming Soon | The-Memory-Vault | ✅ |
-| 04 | Coming Soon | AI-Image-Studio | ✅ |
-| 05 | Coming Soon | AI-Multi-Modal-Visual-Novel | ✅ |
+| 03 | The-Memory-Vault | ✅ |
+| 04 | AI-Image-Studio | ✅ |
+| 05 | AI-Multi-Modal-Visual-Novel | ✅ |
 | Final Project | AI Builder Project | ⏳ |
 
 ---
