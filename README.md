@@ -15,7 +15,12 @@ mirai-ai-summer-internship-2026/
 ├── Assignment-02-AI-Multiverse/
 ├── Assignment-03/The-Memory-Vault/
 ├── Assignment-04/AI-Image-Studio/
-├── Assignment-05/
+├── Assignment-05/AI-Multi-Modal-Visual-Novel/
+├── Assignment-06/
+├── Assignment-07/
+├── Assignment-08/
+├── Assignment-09/
+├── Assignment-10/
 └── Final-Project/
 ```
 
@@ -35,7 +40,7 @@ Each assignment is organized in its own folder and contains:
 | 02 | AI Multiverse Interface | ✅ |
 | 03 | Coming Soon | The-Memory-Vault | ✅ |
 | 04 | Coming Soon | AI-Image-Studio | ✅ |
-| 05 | Coming Soon | ⏳ |
+| 05 | Coming Soon | AI-Multi-Modal-Visual-Novel | ✅ |
 | Final Project | AI Builder Project | ⏳ |
 
 ---
