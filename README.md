@@ -14,7 +14,7 @@ mirai-ai-summer-internship-2026/
 ├── Assignment-01-The-Identity-Echo/
 ├── Assignment-02-AI-Multiverse/
 ├── Assignment-03/The-Memory-Vault/
-├── Assignment-04/
+├── Assignment-04/AI-Image-Studio/
 ├── Assignment-05/
 └── Final-Project/
 ```
@@ -33,8 +33,8 @@ Each assignment is organized in its own folder and contains:
 |------------|-------------------------------|:------:|
 | 01 | The Identity Echo Interface | ✅ |
 | 02 | AI Multiverse Interface | ✅ |
-| 03 | Coming Soon | ⏳ |
-| 04 | Coming Soon | ⏳ |
+| 03 | Coming Soon | The-Memory-Vault | ✅ |
+| 04 | Coming Soon | AI-Image-Studio | ✅ |
 | 05 | Coming Soon | ⏳ |
 | Final Project | AI Builder Project | ⏳ |
 
