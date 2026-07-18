@@ -27,7 +27,7 @@ mirai-ai-summer-internship-2026/
 Each assignment is organized in its own folder and contains:
 - Source Code
 - Assignment-specific README
-- Screenshots
+- Screenshots / Demo
 - Dependencies (if required)
 
 ---
