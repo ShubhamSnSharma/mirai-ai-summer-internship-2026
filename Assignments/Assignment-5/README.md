@@ -6,14 +6,14 @@ An interactive **AI-powered Visual Novel** built with **Streamlit**, **Google Ge
 
 ## ✨ Features
 
-- 🎭 Choose from multiple story genres and art styles
-- 🤖 AI-generated interactive stories using Google Gemini
-- 📦 Structured JSON responses for story flow
-- 🖼️ AI-generated illustrations with Pollinations AI
-- 🔊 Built-in narration using Microsoft Edge TTS
-- 🎮 Dynamic choices that influence the next scene
-- 💾 Stateful conversations using Streamlit Session State
-- 🛡️ Graceful error handling with `try...except`
+- 🎭 Multiple story genres and art styles
+- 🤖 AI-generated interactive storytelling with Google Gemini
+- 📦 Structured JSON parsing for story flow
+- 🖼️ AI-generated illustrations using Pollinations AI
+- 🔊 AI narration powered by Microsoft Edge TTS
+- 🎮 Dynamic choices that influence the story
+- 💾 Stateful conversations with Streamlit Session State
+- 🛡️ Graceful error handling using `try...except`
 
 ---
 
@@ -37,3 +37,54 @@ An interactive **AI-powered Visual Novel** built with **Streamlit**, **Google Ge
 ```bash
 git clone <repository-url>
 cd Assignment-5
+```
+
+### Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Create a `.env` file
+
+```env
+GEMINI_API_KEY=your_api_key_here
+```
+
+### Run the application
+
+```bash
+streamlit run assignment5.py
+```
+
+---
+
+## 🎥 Demo
+
+A short demonstration of the application is available in the **`demo/`** folder.
+
+---
+
+## 📂 Project Structure
+
+```text
+Assignment-5/
+│
+├── assignment5.py      # Main Streamlit application
+├── README.md
+└── demo/               # Project demonstration video
+```
+
+---
+
+## 📚 About the Project
+
+This project was developed as the **Capstone Mini Project (Assignment 5)** for the **MirAI School of Technology – Virtual Summer Internship 2026**.
+
+The application demonstrates:
+
+- Structured JSON parsing
+- Dynamic UI generation
+- Multi-modal AI (Text + Image + Audio)
+- Stateful Streamlit architecture
+- Graceful error handling
