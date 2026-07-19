@@ -7,10 +7,21 @@ import edge_tts
 import asyncio
 import requests
 
+# Setting pgae configurations
+st.set_page_config(
+    page_title="StoryVerse",
+    page_icon="📖",
+    layout="centered",
+    initial_sidebar_state="expanded"
+)
+
 load_dotenv()
 
-st.title("📖 AI Visual Novel")
-st.caption("Create an AI-generated interactive adventure with dynamic visuals and narration.")
+st.title("📖 StoryVerse")
+st.subheader("AI-Powered Visual Novel")
+st.caption(
+    "Create immersive adventures with AI-generated stories, artwork, and narration."
+)
 
 # Phase 1: The Director's Cut (UI & Configuration)
 # Cache the Gemini client so Streamlit doesn't recreate it on every rerun
@@ -88,7 +99,7 @@ if start_story:
     # Phase 5: Graceful Failures
     # Prevent the app from crashing if the Gemini API fails
     try:
-        with st.spinner("📖 Creating your adventure..."):
+        with st.spinner("✨ Creating your StoryVerse..."):
             response = st.session_state.gemini_chat.send_message(
                 f"""
                 Create the opening scene of an original interactive visual novel in the {story_genre} genre.
@@ -191,7 +202,7 @@ if "story" in st.session_state:
 
         st.image(
             image.content,
-            caption="Story Scene",
+            caption=f"{title} • AI-generated artwork",
             use_container_width=True
         )
 
@@ -225,7 +236,7 @@ if "story" in st.session_state:
     for option in options:
         if st.button(option):
 
-            with st.spinner("Generating next scene..."):
+            with st.spinner("✨ Writing the next chapter..."):
 
                 # Phase 5: Graceful Failures
                 # Prevent the app from crashing while continuing the story
