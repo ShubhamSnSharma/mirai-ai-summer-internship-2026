@@ -10,6 +10,7 @@ import requests
 load_dotenv()
 
 st.title("📖 AI Visual Novel")
+st.caption("Create an AI-generated interactive adventure with dynamic visuals and narration.")
 
 # Phase 1: The Director's Cut (UI & Configuration)
 # Cache the Gemini client so Streamlit doesn't recreate it on every rerun
@@ -32,7 +33,7 @@ async def generate_audio(text):
 
 # Phase 1: The Director's Cut (UI & Configuration)
 # Configure the story settings from the sidebar
-st.sidebar.header("Story Settings")
+st.sidebar.header("🎮 Story Settings")
 
 story_genre = st.sidebar.selectbox(
     "📚 Story Genre",
@@ -64,8 +65,10 @@ art_style = st.sidebar.selectbox(
     help="Choose the artistic style for AI-generated illustrations."
 )
 
-start_story = st.sidebar.button("🎮 Start New Story")
-
+start_story = st.sidebar.button(
+    "🎮 Start New Story",
+    use_container_width=True
+)
 
 # Phase 1: The Director's Cut (UI & Configuration)
 # Create a persistent Gemini chat session
@@ -85,51 +88,96 @@ if start_story:
     # Phase 5: Graceful Failures
     # Prevent the app from crashing if the Gemini API fails
     try:
-        response = st.session_state.gemini_chat.send_message(
-            f"""
-            Start a {story_genre} interactive visual novel.
-            The image_prompt should be a detailed prompt for generating an image in {art_style} style.
-            The story_text should be written in a cinematic, immersive narration style suitable for spoken narration.
-            Keep paragraphs reasonably short and natural for text-to-speech.
-            Respond ONLY with valid JSON.
-            The JSON must contain:
-            {{
-                "story_text": "...",
-                "image_prompt": "...",
-                "options": [
-                    "...",
-                    "...",
-                    "..."
-                ]
-            }}
+        with st.spinner("📖 Creating your adventure..."):
+            response = st.session_state.gemini_chat.send_message(
+                f"""
+                Create the opening scene of an original interactive visual novel in the {story_genre} genre.
 
-            Do not wrap the response in markdown.
-            Do not include explanations.
-            Return only valid JSON.
-            """
-        )
+                Requirements:
+                - Begin with a strong hook that immediately creates curiosity.
+                - Write in second person ("You...") so the reader feels involved.
+                - Describe the setting using vivid sensory details.
+                - Introduce a clear objective, mystery, or conflict.
+                - Keep the narration cinematic, immersive, and suitable for audiobook narration.
+                - Use varied sentence lengths and natural flow.
+                - Keep the story between 120 and 180 words.
+                - End with a meaningful decision point.
 
-        story = json.loads(response.text)
-        st.session_state.story = story
+                Generate an image_prompt that accurately represents THIS exact story scene.
+
+                The image prompt must include:
+                - Main character appearance
+                - Environment
+                - Lighting
+                - Mood
+                - Camera angle
+                - Color palette
+                - Important objects
+                - Atmospheric details
+
+                Write the image prompt as a high-quality AI image generation prompt in {art_style} style.
+                Do not mention text, captions, UI elements, speech bubbles, or watermarks.
+
+                Generate exactly three choices.
+
+                Each choice must:
+                - Meaningfully change the story
+                - Be under 10 words
+                - Sound like an action
+                - Be unique from the others
+
+                Respond ONLY with valid JSON.
+
+                The JSON must contain:
+
+                {{
+                    "title": "...",
+                    "story_text": "...",
+                    "image_prompt": "...",
+                    "options": [
+                        "...",
+                        "...",
+                        "..."
+                    ]
+                }}
+
+                No markdown.
+                No code fences.
+                No explanations.
+                Return only JSON that can be parsed by json.loads().
+                """
+            )
+
+            story = json.loads(response.text)
+            st.session_state.story = story
 
     except Exception:
-        st.toast("Couldn't start the story. Please try again.")
+        st.toast("⚠️ Story generation failed. Please try again in a moment.")
 
 
 # Show instructions before the first story is created
 if "story" not in st.session_state:
     st.info(
-        "👈 Select a genre and art style from the sidebar, then click **Start New Story** to begin your adventure."
-    )
+        """
+    👈 **Choose your adventure**
 
+    1. Select a story genre.
+    2. Pick an art style.
+    3. Click **Start New Story**.
+    4. Make choices to shape your own adventure.
+    """
+    )
 
 # Display the current story once it exists
 if "story" in st.session_state:
 
+    title = st.session_state.story["title"]
     story_text = st.session_state.story["story_text"]
     image_prompt = st.session_state.story["image_prompt"]
     options = st.session_state.story["options"]
 
+    # Improve image quality by adding extra descriptive keywords
+    image_prompt += ", ultra detailed, masterpiece, cinematic lighting, dramatic composition, highly detailed environment, professional concept art, 8k"
 
     # Phase 4.1: Multi-Media Rendering (Visuals)
     # Generate and display the AI story illustration
@@ -153,6 +201,7 @@ if "story" in st.session_state:
 
     # Phase 3: Dynamic UI Generation
     # Display the current story scene
+    st.header(title)
     st.subheader("Story")
     st.write(story_text)
 
@@ -184,15 +233,51 @@ if "story" in st.session_state:
                     response = st.session_state.gemini_chat.send_message(
                         f"""
                         The player chose: {option}
-                        Continue the {story_genre} story.
-                        The image_prompt should describe the current scene in {art_style} style.
-                        Write story_text as cinematic narration, as if it is being narrated in an audiobook.
-                        Use vivid but concise descriptions and natural sentence flow.
-                        Keep paragraphs short so they sound smooth when converted to speech.
+
+                        Continue the existing {story_genre} story.
+
+                        Requirements:
+                        - Continue naturally from the previous scene.
+                        - Never restart the story.
+                        - Maintain the same characters, setting, tone, and unresolved mysteries.
+                        - Build upon previous events.
+                        - Write in second person ("You...").
+                        - Keep the narration cinematic, immersive, and suitable for audiobook narration.
+                        - Use vivid but concise descriptions.
+                        - Keep the story between 120 and 180 words.
+                        - End with another meaningful decision point.
+
+                        Generate an image_prompt that accurately represents THIS exact scene.
+
+                        Keep the main character visually consistent across scenes unless the story explicitly changes their appearance.
+
+                        The image prompt must include:
+                        - Main character appearance
+                        - Environment
+                        - Lighting
+                        - Mood
+                        - Camera angle
+                        - Color palette
+                        - Important objects
+                        - Atmospheric details
+
+                        Write the image prompt as a high-quality AI image generation prompt in {art_style} style.
+                        Do not mention text, captions, UI elements, speech bubbles, or watermarks.
+
+                        Generate exactly three choices.
+
+                        Each choice must:
+                        - Meaningfully change the story
+                        - Be under 10 words
+                        - Sound like an action
+                        - Be unique from the others
+
                         Respond ONLY with valid JSON.
+
                         The JSON must contain:
 
                         {{
+                            "title": "...",
                             "story_text": "...",
                             "image_prompt": "...",
                             "options": [
@@ -202,9 +287,10 @@ if "story" in st.session_state:
                             ]
                         }}
 
-                        Do not wrap the response in markdown.
-                        Do not include explanations.
-                        Return only valid JSON.
+                        No markdown.
+                        No code fences.
+                        No explanations.
+                        Return only JSON that can be parsed by json.loads().
                         """
                     )
 
