@@ -99,7 +99,7 @@ if start_story:
     # Phase 5: Graceful Failures
     # Prevent the app from crashing if the Gemini API fails
     try:
-        with st.spinner("✨ Creating your StoryVerse..."):
+        with st.spinner("✨ Generating story, artwork, and narration..."):
             response = st.session_state.gemini_chat.send_message(
                 f"""
                 Create the opening scene of an original interactive visual novel in the {story_genre} genre.
@@ -237,7 +237,7 @@ if "story" in st.session_state:
         if st.button(option):
 
             with st.spinner("✨ Writing the next chapter..."):
-
+                
                 # Phase 5: Graceful Failures
                 # Prevent the app from crashing while continuing the story
                 try:
