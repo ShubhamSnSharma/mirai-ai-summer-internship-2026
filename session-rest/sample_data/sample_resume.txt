@@ -1,0 +1,34 @@
+ALEX CHEN
+Full Stack & AI Software Engineer | San Francisco, CA
+alex.chen@email.com | (555) 019-2834 | github.com/alexchen-dev | linkedin.com/in/alexchen-tech
+
+SUMMARY
+Results-driven Software Engineer with 4+ years of experience building scalable web applications, microservices, and AI-assisted tools. Proficient in Python, TypeScript, React, Next.js, FastAPI, and PostgreSQL. Demonstrated success reducing system latency by 35% and deploying LLM pipelines serving 50k daily active users.
+
+TECHNICAL SKILLS
+Languages: Python, JavaScript/TypeScript, SQL, HTML/CSS, Go
+Frameworks & Libraries: React, Next.js, FastAPI, Streamlit, Node.js, PyTorch, LangChain
+Databases & Tools: PostgreSQL, Redis, Docker, AWS (S3, EC2, Lambda), Git, CI/CD pipelines, TailwindCSS
+
+WORK EXPERIENCE
+Senior Full Stack Engineer | CloudTech Solutions, San Francisco, CA
+June 2023 – Present
+- Architected and launched a real-time analytics dashboard using React, FastAPI, and Redis, serving over 100,000 daily events.
+- Integrated OpenAI and Gemini APIs to automate customer support ticket classification, reducing average response time by 45%.
+- Implemented robust end-to-end testing suite using Pytest and Playwright, improving code coverage from 62% to 89%.
+- Mentored 3 junior developers in TypeScript best practices and microservices design.
+
+Software Engineer | Nexus Innovations, San Jose, CA
+August 2021 – May 2023
+- Developed customer-facing React components and RESTful microservices in Python, handling $2.5M in monthly transactions.
+- Optimized database queries and indexed core PostgreSQL schemas, reducing average API endpoint latency from 450ms to 120ms.
+- Containerized legacy monolithic application using Docker and deployed on AWS ECS with auto-scaling triggers.
+
+PROJECTS
+Smart-Resume-Optimizer (Open Source)
+- Created a Streamlit web application that parses resumes and highlights missing keywords against job descriptions.
+- Built interactive charts using Plotly and implemented PDF export using ReportLab.
+
+EDUCATION
+B.S. in Computer Science | University of California, Berkeley
+Graduated May 2021 | GPA: 3.8 / 4.0

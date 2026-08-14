@@ -1,0 +1,322 @@
+{
+  "metadata": {
+    "analysis_timestamp": "2026-08-14T22:15:00Z",
+    "model": "gemini-2.5-flash",
+    "analysis_version": "1.0.0-phase2.5",
+    "processing_time_seconds": 1.42,
+    "supported_templates": [
+      "ATS Friendly (Clean)",
+      "Modern Professional",
+      "Developer Tech Specialist"
+    ]
+  },
+  "builder": {
+    "recommended_template": "ATS Friendly (Clean)",
+    "ats_safe": true,
+    "estimated_pages": 1,
+    "export_ready": true
+  },
+  "candidate": {
+    "name": "Alex Chen",
+    "email": "alex.chen@email.com",
+    "phone": "(555) 019-2834",
+    "location": "San Francisco, CA",
+    "linkedin": "linkedin.com/in/alexchen-tech",
+    "github": "github.com/alexchen-dev",
+    "portfolio": "alexchen.dev"
+  },
+  "job": {
+    "company": "Apex Innovations Inc.",
+    "role": "Senior Full Stack AI Engineer",
+    "industry": "Enterprise Software & Artificial Intelligence",
+    "experience_required": "3+ years",
+    "education_required": "B.S. or M.S. in Computer Science",
+    "primary_skills": [
+      "Python",
+      "TypeScript",
+      "React",
+      "FastAPI",
+      "Gemini API",
+      "PostgreSQL",
+      "Docker"
+    ],
+    "secondary_skills": [
+      "Redis",
+      "AWS Lambda",
+      "PyTorch",
+      "LangChain",
+      "CI/CD"
+    ]
+  },
+  "scores": {
+    "overall_resume_score": 82,
+    "ats_score": 85,
+    "job_match_score": 79,
+    "interview_probability": 78,
+    "skills_score": 88,
+    "experience_score": 80,
+    "projects_score": 84,
+    "education_score": 90,
+    "score_breakdown": {
+      "content": 85,
+      "format": 91,
+      "impact": 76,
+      "readability": 90,
+      "keyword_match": 81
+    }
+  },
+  "ats_analysis": {
+    "format_score": 91,
+    "readability_score": 90,
+    "keyword_density": 0.048,
+    "parsing_risk": "Low",
+    "missing_sections": [],
+    "ats_issues": [
+      "Project metrics could explicitly highlight scale (DAU/QPS) for LLM pipelines.",
+      "Work experience dates should maintain consistent month abbreviation format."
+    ]
+  },
+  "skills_analysis": {
+    "matched_skills": [
+      { "skill": "Python", "confidence": 98 },
+      { "skill": "TypeScript", "confidence": 95 },
+      { "skill": "React", "confidence": 94 },
+      { "skill": "FastAPI", "confidence": 92 },
+      { "skill": "PostgreSQL", "confidence": 90 },
+      { "skill": "Redis", "confidence": 88 },
+      { "skill": "Docker", "confidence": 87 },
+      { "skill": "Streamlit", "confidence": 95 }
+    ],
+    "missing_skills": [
+      { "skill": "Kubernetes", "confidence": 85 },
+      { "skill": "GraphQL", "confidence": 80 },
+      { "skill": "LlamaIndex", "confidence": 75 }
+    ],
+    "recommended_skills": [
+      "Kubernetes",
+      "OpenTelemetry",
+      "Vector Databases (pgvector/Pinecone)"
+    ],
+    "soft_skills_found": [
+      "Developer Mentorship",
+      "Cross-Functional Collaboration",
+      "System Architecture Design"
+    ],
+    "soft_skills_missing": [
+      "Agile/Scrum Process Ownership"
+    ]
+  },
+  "experience_analysis": [
+    {
+      "company": "CloudTech Solutions",
+      "role": "Senior Full Stack Engineer",
+      "strengths": [
+        "Quantified outcome on support ticket classification (45% reduction in response time).",
+        "Demonstrated technical leadership mentoring 3 junior developers."
+      ],
+      "issues": [
+        "Lacks specific mention of GenAI architecture details or model parameters used."
+      ],
+      "improved_description": "Architected and deployed enterprise microservices in Python (FastAPI, Redis) and integrated Google Gemini API to automate customer support workflows, processing 100k daily events and reducing support ticket response times by 45%."
+    },
+    {
+      "company": "Nexus Innovations",
+      "role": "Software Engineer",
+      "strengths": [
+        "Strong query optimization bullet point with quantitative performance gain (450ms to 120ms)."
+      ],
+      "issues": [
+        "Did not state transaction scale volume handled by individual React components."
+      ],
+      "improved_description": "Engineered customer-facing React interfaces and Python microservices handling $2.5M monthly transactional volume. Optimized PostgreSQL indexing and query execution plans, reducing core API endpoint latency by 73%."
+    }
+  ],
+  "projects_analysis": [
+    {
+      "project_name": "Smart-Resume-Optimizer",
+      "strengths": [
+        "Open-source initiative directly relevant to full-stack AI roles."
+      ],
+      "missing_metrics": [
+        "GitHub stars, user downloads, or evaluation accuracy metrics."
+      ],
+      "missing_technologies": [
+        "PyTest",
+        "Docker"
+      ],
+      "improved_description": "Architected an open-source Streamlit application utilizing Gemini API and Plotly to analyze candidate resumes against job descriptions, featuring PDF export capabilities via ReportLab."
+    }
+  ],
+  "bullet_analysis": [
+    {
+      "section": "Experience",
+      "original": "Integrated OpenAI and Gemini APIs to automate customer support ticket classification, reducing average response time by 45%.",
+      "issue": "Vague API integration description without specifying payload handling or reliability safeguards.",
+      "improved": "Architected async GenAI classification pipelines utilizing Gemini API and Redis caching, processing 50k daily tickets and cutting customer response latency by 45%.",
+      "reason": "Adds technical architecture specificity (async, Redis caching) and operational throughput volume."
+    },
+    {
+      "section": "Experience",
+      "original": "Mentored 3 junior developers in TypeScript best practices and microservices design.",
+      "issue": "Lacks impact metric or outcome of mentorship.",
+      "improved": "Spearheaded engineering mentorship for 3 junior developers, establishing TypeScript standards and reducing pull request review cycles by 30%.",
+      "reason": "Frames mentorship around measurable engineering efficiency gains."
+    }
+  ],
+  "summary_analysis": {
+    "original_summary": "Results-driven Software Engineer with 4+ years of experience building scalable web applications, microservices, and AI-assisted tools. Proficient in Python, TypeScript, React, Next.js, FastAPI, and PostgreSQL. Demonstrated success reducing system latency by 35% and deploying LLM pipelines serving 50k daily active users.",
+    "issues": "Good summary overall, but could align more directly with Senior AI Engineer leadership requirements.",
+    "improved_summary": "Senior Full Stack AI Engineer with 4+ years of experience building enterprise web applications, microservices, and production GenAI pipelines. Specialized in Python (FastAPI), TypeScript (React/Next.js), and LLM orchestration (Gemini API, Redis). Proven track record of architecting systems that process $2.5M monthly transactions and reduce support latency by 45%."
+  },
+  "keyword_analysis": {
+    "matched_keywords": [
+      "Python",
+      "TypeScript",
+      "React",
+      "FastAPI",
+      "PostgreSQL",
+      "Redis",
+      "Docker",
+      "Gemini API",
+      "CI/CD"
+    ],
+    "missing_keywords": [
+      "Kubernetes",
+      "GraphQL",
+      "Enterprise SaaS",
+      "Vector Databases"
+    ],
+    "high_priority_keywords": [
+      "Gemini API",
+      "FastAPI",
+      "React",
+      "PostgreSQL",
+      "TypeScript"
+    ],
+    "low_priority_keywords": [
+      "GraphQL",
+      "Vue"
+    ]
+  },
+  "strengths": [
+    "Strong technical stack alignment across Python, TypeScript, React, and FastAPI.",
+    "Quantified achievements with concrete business impact (45% latency reduction, $2.5M transaction volume).",
+    "Clean education background with 3.8 GPA in Computer Science from UC Berkeley."
+  ],
+  "weaknesses": [
+    "Missing explicit cloud deployment metrics for AWS (EC2/Lambda production scale).",
+    "No mention of container orchestration tools like Kubernetes or infrastructure as code."
+  ],
+  "recommendations": [
+    {
+      "severity": "Critical",
+      "priority": 1,
+      "category": "Experience",
+      "title": "Highlight GenAI Pipeline Architecture Details",
+      "description": "Elaborate on LLM prompt engineering, retry logic, and latency optimization techniques used when integrating Gemini API."
+    },
+    {
+      "severity": "High",
+      "priority": 2,
+      "category": "Keywords",
+      "title": "Incorporate Cloud Orchestration Keywords",
+      "description": "Explicitly mention Docker containerization, AWS Lambda deployment triggers, and CI/CD automation."
+    },
+    {
+      "severity": "Medium",
+      "priority": 3,
+      "category": "Projects",
+      "title": "Add User Metrics to Open Source Projects",
+      "description": "Include GitHub star counts, active user stats, or community adoption metrics for open source tools."
+    }
+  ],
+  "optimized_resume": {
+    "personal_information": {
+      "name": "Alex Chen",
+      "email": "alex.chen@email.com",
+      "phone": "(555) 019-2834",
+      "location": "San Francisco, CA",
+      "linkedin": "linkedin.com/in/alexchen-tech",
+      "github": "github.com/alexchen-dev",
+      "portfolio": "alexchen.dev"
+    },
+    "headline": "Senior Full Stack & AI Software Engineer",
+    "professional_summary": "Senior Full Stack AI Engineer with 4+ years of experience building enterprise web applications, microservices, and production GenAI pipelines. Specialized in Python (FastAPI), TypeScript (React/Next.js), and LLM orchestration (Gemini API, Redis). Proven track record of architecting systems that process $2.5M monthly transactions and reduce support latency by 45%.",
+    "experience": [
+      {
+        "company": "CloudTech Solutions",
+        "location": "San Francisco, CA",
+        "role": "Senior Full Stack Engineer",
+        "start_date": "June 2023",
+        "end_date": "Present",
+        "bullets": [
+          "Architected async GenAI classification pipelines utilizing Gemini API and Redis caching, processing 50k daily tickets and cutting customer response latency by 45%.",
+          "Engineered a real-time telemetry dashboard in React and FastAPI handling 100,000+ daily analytics events.",
+          "Implemented comprehensive testing suite with Pytest and Playwright, elevating code coverage from 62% to 89%.",
+          "Spearheaded engineering mentorship for 3 junior developers, establishing TypeScript standards and reducing code review cycles by 30%."
+        ]
+      },
+      {
+        "company": "Nexus Innovations",
+        "location": "San Jose, CA",
+        "role": "Software Engineer",
+        "start_date": "August 2021",
+        "end_date": "May 2023",
+        "bullets": [
+          "Developed customer-facing React interfaces and Python REST microservices processing $2.5M in monthly transactional volume.",
+          "Optimized PostgreSQL database indexes and query execution paths, cutting core API endpoint latency from 450ms to 120ms.",
+          "Containerized monolithic microservices using Docker and automated deployment on AWS ECS with auto-scaling."
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "project_name": "Smart-Resume-Optimizer",
+        "tech_stack": ["Streamlit", "Python", "Gemini API", "Plotly", "ReportLab"],
+        "description": "Open-source web application that analyzes candidate resumes against job descriptions, generating keyword gap analytics and ATS-friendly PDF exports."
+      }
+    ],
+    "education": [
+      {
+        "degree": "B.S. in Computer Science",
+        "institution": "University of California, Berkeley",
+        "location": "Berkeley, CA",
+        "graduation_date": "May 2021",
+        "gpa": "3.8 / 4.0"
+      }
+    ],
+    "skills": {
+      "languages": ["Python", "TypeScript", "JavaScript", "SQL", "Go"],
+      "frameworks": ["React", "Next.js", "FastAPI", "Streamlit", "Node.js", "PyTorch", "LangChain"],
+      "databases": ["PostgreSQL", "Redis"],
+      "tools": ["Docker", "Git", "CI/CD Pipelines", "TailwindCSS"],
+      "cloud": ["AWS (S3, EC2, Lambda)"],
+      "other": ["RESTful APIs", "Microservices Architecture", "GenAI Prompt Engineering"]
+    },
+    "certifications": [
+      "AWS Certified Developer – Associate"
+    ],
+    "achievements": [
+      "Graduated with High Honors from UC Berkeley (3.8 GPA)",
+      "Top Contributor to Open-Source Developer Tools"
+    ],
+    "languages_spoken": [
+      "English (Native)",
+      "Mandarin (Professional Working)"
+    ],
+    "interests": [
+      "Open Source AI Tools",
+      "System Performance Tuning",
+      "Competitive Programming"
+    ]
+  },
+  "recruiter_feedback": {
+    "overall_verdict": "Strong Candidate for Senior Full Stack AI Role",
+    "hire_decision": "Strong Pursue / Move to Technical Onsite",
+    "top_concerns": [
+      "Needs explicit mention of Kubernetes or large-scale container orchestration experience.",
+      "Verify production monitoring practices for GenAI API latency and rate limits."
+    ],
+    "final_comments": "Alex presents a solid engineering background with clear technical progression from mid-level to senior responsibilities. His hands-on experience with FastAPI, React, and Gemini API integrations makes him an immediate fit for the Senior Full Stack AI Engineer role at Apex Innovations."
+  }
+}

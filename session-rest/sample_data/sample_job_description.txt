@@ -1,0 +1,21 @@
+Role: Senior Full Stack AI Engineer
+Company: Apex Innovations Inc.
+Location: Remote / San Francisco, CA
+
+About the Role:
+We are seeking an ambitious Senior Full Stack AI Engineer to lead the development of our next-generation enterprise SaaS platform. You will work across the entire stack—from frontend React/Next.js interfaces to Python backend microservices and GenAI pipelines.
+
+Key Responsibilities:
+- Design, build, and maintain production-grade web applications using Python, TypeScript, and modern frontend frameworks.
+- Build integrations with Gemini API and open-source LLMs to power intelligent enterprise workflow automation.
+- Optimize database schemas (PostgreSQL, Redis) for low-latency queries and high-throughput data pipelines.
+- Implement robust CI/CD pipelines, Docker containerization, and cloud deployment on AWS or Google Cloud Platform.
+- Collaborate closely with Product and UX teams to build responsive, accessible dashboard user interfaces.
+
+Requirements & Qualifications:
+- 3+ years of professional software engineering experience with Python and JavaScript/TypeScript.
+- Strong hands-on experience with FastAPI, Flask, or Django, and modern frontend frameworks (React, Next.js, Vue).
+- Demonstrated experience deploying LLM/AI integrations into production (Gemini, LangChain, LlamaIndex, PyTorch).
+- Solid understanding of relational databases (PostgreSQL), caching (Redis), and REST/GraphQL APIs.
+- Experience with cloud architecture (AWS Lambda, Docker, Kubernetes) and automated testing frameworks.
+- B.S. or M.S. in Computer Science or equivalent practical experience.
