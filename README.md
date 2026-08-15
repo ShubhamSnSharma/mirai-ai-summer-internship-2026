@@ -4,13 +4,23 @@
 **Track:** AI Builder  
 **Stack:** Python · Streamlit · Google Gemini 2.5 Flash · Pandas · Plotly · ReportLab  
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://resumeforgeai.streamlit.app/)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-blue?logo=github)](https://github.com/ShubhamSnSharma/mirai-ai-summer-internship-2026)
+
 ---
 
-## Repository Structure
+## 🌐 Live Capstone Deployment
+
+> **ResumeForge AI (Problem Statement #17):** [https://resumeforgeai.streamlit.app/](https://resumeforgeai.streamlit.app/)
+
+---
+
+## 📂 Repository Structure
 
 ```
 mirai-ai-summer-internship-2026/
 │
+├── requirements.txt       ← Unified dependencies for Streamlit Cloud & local setup
 ├── Assignment 1/          ← The Identity Echo Interface
 ├── Assignment 2/          ← Upgrading the AI Multiverse
 ├── Assignment 3/          ← The Memory Vault (Stateful Chatbot)
@@ -18,12 +28,12 @@ mirai-ai-summer-internship-2026/
 ├── Assignment 5/          ← The Multi-Modal Visual Novel
 ├── Assignment 6/          ← GitHub Profile: The Hacker Terminal
 ├── Assignment 7/          ← The Life-OS Wellbeing Dashboard
-└── Capstone Project/      ← The AI Resume Critic
+└── Capstone Project/      ← ResumeForge AI (The AI Resume Critic)
 ```
 
 ---
 
-## Assignments
+## 📚 Assignments Overview
 
 | # | Title | Key Concepts |
 |---|-------|-------------|
@@ -37,20 +47,25 @@ mirai-ai-summer-internship-2026/
 
 ---
 
-## Capstone Project — The AI Resume Critic
+## 🚀 Capstone Project — ResumeForge AI (Problem Statement #17)
 
 A production-grade, recruiter-intelligence workspace powered by **Gemini 2.5 Flash**.
 
-**Key Features:**
+- **Live URL:** [https://resumeforgeai.streamlit.app/](https://resumeforgeai.streamlit.app/)
+- **Full Documentation:** [Capstone Project README](Capstone%20Project/README.md)
+
+### Key Features:
 - Single-call Gemini pipeline returning a 17-section structured JSON contract
 - 5-axis visual analytics (Plotly radar chart + skill alignment bars)
 - Interactive Resume Studio with 3 live-switching layout templates
 - Production export engine (PDF via ReportLab · DOCX via Python-Docx)
 
+### Quick Start:
 ```bash
-cd "Capstone Project"
+git clone https://github.com/ShubhamSnSharma/mirai-ai-summer-internship-2026.git
+cd mirai-ai-summer-internship-2026
 pip install -r requirements.txt
-streamlit run app.py
+streamlit run "Capstone Project/app.py"
 ```
 
 ---

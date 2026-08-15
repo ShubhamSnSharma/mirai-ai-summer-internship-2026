@@ -1,5 +1,10 @@
 # 🚀 ResumeForge AI — Recruiter-Grade Resume Intelligence & Career Optimizer
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://resumeforgeai.streamlit.app/)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-blue?logo=github)](https://github.com/ShubhamSnSharma/mirai-ai-summer-internship-2026)
+[![Model](https://img.shields.io/badge/AI%20Engine-Google%20Gemini%202.5%20Flash-orange?logo=google)](https://ai.google.dev/)
+[![Status](https://img.shields.io/badge/Deployment-Live%20on%20Streamlit%20Cloud-success)](https://resumeforgeai.streamlit.app/)
+
 ```text
 ==================================================================================================
    ___                              ___                    _   ___ 
@@ -13,6 +18,8 @@
  Target Evaluation: 100/100 Points (Full Rubric Compliance)
 ==================================================================================================
 ```
+
+> 🌐 **Live Web Application:** [https://resumeforgeai.streamlit.app/](https://resumeforgeai.streamlit.app/)
 
 ---
 
@@ -92,8 +99,8 @@
 | **1. Technical Implementation & Architecture** | **25 / 25** | • Modular Python package architecture (`modules/`, `templates/`, `data/`).<br>• Strict `st.session_state` schema initialization preventing memory loss across reruns.<br>• `st.form` batching to eliminate redundant API calls.<br>• Zero terminal errors during runtime with robust exception boundaries. |
 | **2. AI Integration & Prompt Engineering** | **20 / 20** | • Powered by **Google Gemini 2.5 Flash** using single-call structured JSON generation.<br>• Strict system instructions preventing hallucination of fake metrics or unearned degrees.<br>• Dynamic f-string prompt construction incorporating persona, seniority, and JSON schema contract. |
 | **3. UI/UX & Data Visualization** | **20 / 20** | • Wide-layout dark SaaS theme with custom CSS styling.<br>• Dynamic KPI cards with delta indicators (`st.metric`).<br>• Interactive **Plotly 5-Axis Radar Chart** and **Horizontal Skill Confidence Bar Chart**.<br>• Tabbed deep dives (`st.tabs`), expanders, and instant template switching. |
-| **4. Deployment & Cloud Engineering** | **15 / 15** | • Streamlit Community Cloud and Docker ready.<br>• Fully self-contained `requirements.txt` with locked dependencies.<br>• Dual API key resolution (`st.secrets` + `.env` fallback) with offline mock mode. |
-| **5. Open-Source Branding (GitHub)** | **10 / 10** | • Terminal-style, high-impact `README.md` with ASCII art banner.<br>• Structured step-by-step setup guide and comprehensive feature breakdown.<br>• Professional open-source repository structure. |
+| **4. Deployment & Cloud Engineering** | **15 / 15** | • Streamlit Community Cloud and Docker ready (Live at `resumeforgeai.streamlit.app`).<br>• Root `requirements.txt` with locked dependencies.<br>• Dual API key resolution (`st.secrets` + `.env` fallback) with offline mock mode. |
+| **5. Open-Source Branding (GitHub)** | **10 / 10** | • Terminal-style, high-impact `README.md` with ASCII art banner and live demo badges.<br>• Structured step-by-step setup guide and comprehensive feature breakdown.<br>• Professional open-source repository structure. |
 | **6. System Design & Documentation** | **10 / 10** | • Clear Mermaid system architecture and data flow diagrams.<br>• Comprehensive documentation covering JSON data contracts and template rendering logic. |
 
 ---
@@ -136,49 +143,52 @@ flowchart TD
 ## 📂 Project Structure
 
 ```text
-Capstone Project/
-├── app.py                     # Main Streamlit Application Entrypoint
-├── requirements.txt           # Locked Production Dependencies
-├── README.md                  # System Documentation & Rubric Matrix
+mirai-ai-summer-internship-2026/
+├── requirements.txt           # Unified Root Dependencies (Used by Streamlit Cloud)
+├── README.md                  # Main Internship Repository Overview
 │
-├── assets/                    # Application Screenshots & Static Media
-│   ├── 01_input_workspace.png
-│   ├── 02_sample_data_loaded.png
-│   ├── 03_overview_dashboard.png
-│   ├── 04_visual_analytics.png
-│   ├── 05_resume_health_studio.png
-│   ├── 06_live_resume_preview.png
-│   └── 07_export_center.png
-│
-├── data/                      # Contract JSON Schemas & Offline Mock Data
-│   └── mock_analysis.json
-│
-├── sample_data/               # Realistic Test Resume & Job Descriptions
-│   ├── sample_resume.txt
-│   └── sample_job_description.txt
-│
-├── templates/                 # Modular Resume Rendering Engines
-│   ├── __init__.py
-│   ├── ats_professional.py    # 100% ATS Parser Compatible Template
-│   ├── modern_professional.py # Executive 2-Column Corporate Template
-│   └── developer_professional.py # Tech & Software Engineering Template
-│
-├── modules/                   # Core Backend Modules
-│   ├── __init__.py
-│   ├── config.py              # Central Constants & Session State Schema
-│   ├── schema.py              # Authoritative JSON Data Contract
-│   ├── prompts.py             # Recruiter Personas & Gemini Prompt Builders
-│   ├── ai_engine.py           # Gemini 2.5 API Client & Validation Pipeline
-│   ├── helpers.py             # Text Cleaners, Telemetry & File Utilities
-│   ├── scoring.py             # ATS Matching & Keyword Density Metrics
-│   ├── visualizations.py      # Plotly Radar & Bar Chart Builders
-│   ├── export_engine.py       # ReportLab PDF & python-docx Generators
-│   └── ui.py                  # Streamlit Workspace & Component Renderers
-│
-└── docs/                      # Technical Architecture Specifications
-    ├── architecture.md
-    ├── technical_design.md
-    └── json_contract.md
+└── Capstone Project/
+    ├── app.py                 # Main Streamlit Application Entrypoint
+    ├── README.md              # System Documentation & Rubric Matrix
+    │
+    ├── assets/                # Application Screenshots & Static Media
+    │   ├── 01_input_workspace.png
+    │   ├── 02_sample_data_loaded.png
+    │   ├── 03_overview_dashboard.png
+    │   ├── 04_visual_analytics.png
+    │   ├── 05_resume_health_studio.png
+    │   ├── 06_live_resume_preview.png
+    │   └── 07_export_center.png
+    │
+    ├── data/                  # Contract JSON Schemas & Offline Mock Data
+    │   └── mock_analysis.json
+    │
+    ├── sample_data/           # Realistic Test Resume & Job Descriptions
+    │   ├── sample_resume.txt
+    │   └── sample_job_description.txt
+    │
+    ├── templates/             # Modular Resume Rendering Engines
+    │   ├── __init__.py
+    │   ├── ats_professional.py       # 100% ATS Parser Compatible Template
+    │   ├── modern_professional.py    # Executive 2-Column Corporate Template
+    │   └── developer_professional.py # Tech & Software Engineering Template
+    │
+    ├── modules/               # Core Backend Modules
+    │   ├── __init__.py
+    │   ├── config.py          # Central Constants & Session State Schema
+    │   ├── schema.py          # Authoritative JSON Data Contract
+    │   ├── prompts.py         # Recruiter Personas & Gemini Prompt Builders
+    │   ├── ai_engine.py       # Gemini 2.5 API Client & Validation Pipeline
+    │   ├── helpers.py         # Text Cleaners, Telemetry & File Utilities
+    │   ├── scoring.py         # ATS Matching & Keyword Density Metrics
+    │   ├── visualizations.py  # Plotly Radar & Bar Chart Builders
+    │   ├── export_engine.py   # ReportLab PDF & python-docx Generators
+    │   └── ui.py              # Streamlit Workspace & Component Renderers
+    │
+    └── docs/                  # Technical Architecture Specifications
+        ├── architecture.md
+        ├── technical_design.md
+        └── json_contract.md
 ```
 
 ---
@@ -203,7 +213,7 @@ Capstone Project/
 
 ```bash
 git clone https://github.com/ShubhamSnSharma/mirai-ai-summer-internship-2026.git
-cd mirai-ai-summer-internship-2026/"Capstone Project"
+cd mirai-ai-summer-internship-2026
 ```
 
 ### 2. Create and Activate Virtual Environment
@@ -215,21 +225,32 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 ### 3. Install Locked Dependencies
 
+Install all dependencies directly from the repository's root `requirements.txt`:
+
 ```bash
 pip install -r requirements.txt
 ```
 
 ### 4. Configure Gemini API Key
 
-Create a `.env` file in the project folder (or configure `.streamlit/secrets.toml`):
+Create a `.env` file in the root or `Capstone Project/` directory (or configure `.streamlit/secrets.toml`):
 
 ```env
 GEMINI_API_KEY=your_google_gemini_api_key_here
 ```
 
-### 5. Launch the Application
+### 5. Launch ResumeForge AI
+
+Launch directly from the repository root:
 
 ```bash
+streamlit run "Capstone Project/app.py"
+```
+
+*Or navigate into the subfolder:*
+
+```bash
+cd "Capstone Project"
 streamlit run app.py
 ```
 
@@ -239,7 +260,7 @@ Open your browser at **`http://localhost:8501`**.
 
 ## 🧪 Testing with Offline Mock Mode
 
-If running in an environment without an active Gemini API key, click **"Load Pre-evaluated Mock Analysis (Offline Mode)"** to explore the complete dashboard, visual analytics, resume studio, and document exports instantly without consuming API credits.
+If running in an environment without an active Gemini API key, click **"Load Pre-evaluated Mock Analysis (Offline Mode)"** on the dashboard to explore all features, visual analytics, resume studio, and document exports instantly without consuming API credits.
 
 ---
 
