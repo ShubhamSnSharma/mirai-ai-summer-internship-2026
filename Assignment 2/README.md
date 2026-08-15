@@ -1,23 +1,41 @@
-# AI Multiverse
+# Assignment 2 — Upgrading the AI Multiverse
 
-A simple AI chatbot built with **Streamlit** and the **Google Gemini API** as part of my MirAI School of Technology Summer Internship.
-
-This project upgrades the chatbot demonstrated during the session by adding a cleaner interface, multiple AI personalities, and conversation history.
+**Track:** MirAI School of Technology — Virtual Summer Internship 2026 (AI Builder)  
+**Deadline:** August 25, 2026, 11:59 PM  
 
 ---
 
-## Features
+## Objective
 
-- Chat with different AI personalities
-- Conversation history during the current session
-- Clean Streamlit chat interface
-- Secure API key management using `.env`
-- Error handling for API requests
+Upgrade the AI Multiverse chatbot's layout, prompt engineering, and visual design to make the app resemble a modern messaging platform.
+
+---
+
+## Tasks Completed
+
+### Task 1 — UI Cleanup (Sidebar Integration)
+- Moved personality `selectbox` into the sidebar using `st.sidebar.selectbox`.
+- Added `st.sidebar.title("App Settings")`.
+
+### Task 2 — Persona Expansion
+- Expanded personalities to 3+ new creative options (e.g., "A panicked college student at 3 AM", "A 1920s Mafia Boss", "A highly sarcastic fitness coach").
+
+### Task 3 — Parameter Tuning (The Slider)
+- Added `st.sidebar.slider("Intensity Level", 1, 10)` to control AI personality intensity.
+- Updated the `ai_instructions` f-string to include intensity value.
+
+### Task 4 — The Visual Upgrade (Chat Elements)
+- Replaced `st.success()` and `st.write()` with `st.chat_message()`.
+- User messages rendered with `st.chat_message("user")`.
+- AI responses rendered with `st.chat_message("assistant")`.
+
+### Task 5 — Dynamic Avatars (Control Flow)
+- `if/elif` block assigns a unique `bot_avatar` emoji per personality.
+- Avatar passed into `st.chat_message("assistant", avatar=bot_avatar)`.
 
 ---
 
 ## Tech Stack
-
 - Python
 - Streamlit
 - Google Gemini API (`google-genai`)
@@ -25,30 +43,12 @@ This project upgrades the chatbot demonstrated during the session by adding a cl
 
 ---
 
-## Getting Started
-
-1. Clone the repository
+## Run Locally
 
 ```bash
-git clone <repository-url>
-```
-
-2. Install the required packages
-
-```bash
-pip install -r requirements.txt
-```
-
-3. Create a `.env` file
-
-```env
-GEMINI_API_KEY=YOUR_API_KEY
-```
-
-4. Run the application
-
-```bash
-streamlit run app.py
+pip install streamlit google-genai python-dotenv
+# Create a .env file with: GEMINI_API_KEY=your_key_here
+streamlit run assignment2.py
 ```
 
 ---
@@ -56,26 +56,10 @@ streamlit run app.py
 ## Screenshots
 
 ### Home Screen
-
 ![Home](screenshots/home.png)
 
----
-
 ### Conversation Example
-
 ![Conversation](screenshots/chat.png)
-
----
-
-## What I Learned
-
-Through this project I practiced:
-
-- Building interactive UIs with Streamlit
-- Integrating the Google Gemini API
-- Writing prompts to guide AI personalities
-- Managing API keys using environment variables
-- Improving a basic chatbot into a more user-friendly application
 
 ---
 
