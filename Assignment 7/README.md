@@ -1,88 +1,129 @@
-# Assignment 7 — The "Life-OS" Wellbeing Dashboard
+# 📱 ScreenSense AI — Digital Wellbeing & AI Lifestyle Coach
 
-**Track:** MirAI School of Technology — Virtual Summer Internship 2026 (AI Builder)  
-**Deadline:** August 25, 2026, 11:59 PM  
-
----
-
-## Objective
-
-Build a "Life-OS" Streamlit dashboard that visualizes daily screen time data from a synthetic CSV dataset and uses the Gemini API as a personalized productivity and lifestyle coach — giving actionable, real-world replacement suggestions rather than generic advice.
+> An intelligent analytics dashboard that transforms raw device screen-time data into actionable wellness insights and generative AI avatar reflections.
 
 ---
 
-## Architecture
+## Overview
 
-```
-screentime.csv
-      │
-      ▼
-pd.read_csv()  ──►  Pandas DataFrame
-      │
-      ├──► KPI Row (st.metric + st.columns)
-      ├──► Bar/Line Charts (st.bar_chart / st.line_chart)
-      └──► Data Bridge (aggregated string)
-                │
-                ▼
-          Gemini API ──► Lifestyle Coach Analysis ──► st.markdown / st.info / st.warning
-```
+**ScreenSense AI** bridges the gap between passive screen-time tracking and active behavioral change. Built with **Streamlit**, **Pandas**, **Google Gemini 2.5 Flash**, and **Pollinations AI**, it ingests daily usage datasets, visualizes behavioral trends across categories and apps, and generates holistic digital wellness assessments paired with real-time AI-generated mood avatars.
 
 ---
 
-## Tasks Completed
+## Screenshots & Visual Walkthrough
 
-### Phase 1 — The Data Pipeline
-- Created `screentime.csv` with columns: `Date`, `App_Name`, `Category`, `Minutes_Used`.
-- 14+ days of realistic screen time data populated via `csv_generator.py`.
-- Data loaded with `pd.read_csv("screentime.csv")`.
+### 📊 1. Daily Dashboard & Screen Time Analytics
+*Interactive KPI metrics and multi-dimensional category/app breakdown.*
 
-### Phase 2 — The Command Center UI
-- **Sidebar Controls:** `st.selectbox` to filter by day, `st.slider` to set daily screen time goal.
-- **KPI Row:** `st.columns` + `st.metric` displaying:
-  - Total screen time today
-  - Most used app of the day
-  - Delta vs daily goal with `delta_color="inverse"`
-- **Visualizations:** Line chart showing 14-day screen time trends.
+![Daily Dashboard Analytics](assets/dashboard_overview.png)
 
-### Phase 3 — The AI Integration
-- **Data Bridge:** Aggregates daily usage per category, converts to a clean string via `.to_string()`.
-- **System Prompt:** Instructs Gemini to act as a holistic life coach analyzing specific category usage and suggesting physical, real-world replacements (e.g., replacing 3 hours of TikTok with fitness or meal prepping).
-- **Output:** Rendered with `st.markdown`, `st.info`, or `st.warning` based on severity.
+---
 
-### Phase 4 — Innovation Deliverable ✅
-- **The Voice Journal:** Integrated `streamlit-mic-recorder` for 10-second daily reflections.
-- Audio transcript passed alongside CSV data for a highly personalized Gemini coaching response.
+### 📈 2. Historical Screen Time Trends & AI Analysis Trigger
+*Longitudinal screen-time trendline paired with on-demand AI wellbeing coaching.*
+
+![Screen Time Trends & AI Trigger](assets/screentime_trends.png)
+
+---
+
+### 💡 3. AI Digital Wellness Report & Emotional Avatar Reflection
+*Structured wellbeing breakdown (Positive Habits, Areas to Improve, Action Plan) alongside an AI-generated mood avatar illustrating the user's daily habits.*
+
+![AI Wellness Report and Avatar](assets/ai_wellness_report.png)
+
+---
+
+## Key Features
+
+- 📅 **Interactive Date & Goal Selection**: Select any historical date and adjust your target daily screen-time threshold dynamically.
+- 🎯 **Smart KPI Metrics**: Instant visibility into Total Screen Time, Most Used App, and Goal Variance with adaptive delta badges (`over goal` / `under goal`).
+- 📊 **Categorical & App-Level Analytics**:
+  - **Usage by Category** (Coding, Education, Productivity vs. Entertainment, Social Media)
+  - **Usage by App** sorted in descending order for rapid hotspot identification
+- 📈 **Longitudinal Trendline**: Line chart tracking daily aggregate usage across weeks to uncover burnout and recovery patterns.
+- 🧠 **AI Lifestyle Coach (Gemini 2.5 Flash)**:
+  - Differentiates productive screen time from passive leisure consumption.
+  - Generates structured, empathetic feedback:
+    - **Positive Habits**: Acknowledges productive focus and discipline.
+    - **Areas to Improve**: Explains psychological and physical risks of excessive leisure screen time.
+    - **Action Plan**: Delivers 3 concrete, realistic offline replacement habits (e.g., walking, meal prep, reading).
+- 🖼️ **Generative AI Wellbeing Avatar (Pollinations AI)**:
+  - Translates digital metrics into a prompt describing the user's emotional and physical state.
+  - Automatically renders a photorealistic, cinematic visual representation of the user's daily digital balance.
 
 ---
 
 ## Tech Stack
-- Python
-- Streamlit
-- Pandas
-- Google Gemini API (`google-genai`)
-- streamlit-mic-recorder
-- python-dotenv
+
+| Component | Technology | Purpose |
+|---|---|---|
+| **Frontend & UI** | [Streamlit](https://streamlit.io/) | Responsive web dashboard & container layout |
+| **Data Processing** | [Pandas](https://pandas.pydata.org/) | Time-series aggregation, grouping, & KPI computation |
+| **LLM Reasoning** | [Google Gemini 2.5 Flash](https://ai.google.dev/) | Structured wellbeing analysis & avatar prompt engineering |
+| **Generative Art** | [Pollinations AI](https://pollinations.ai/) | Real-time cinematic image generation from prompt data |
+| **Config & Secrets** | `python-dotenv` | Secure API key management |
 
 ---
 
-## Run Locally
+## Architecture & Data Flow
 
-```bash
-pip install streamlit pandas google-genai streamlit-mic-recorder python-dotenv
-# Create a .env file with: GEMINI_API_KEY=your_key_here
-streamlit run assignment7.py
+```
+┌──────────────────┐
+│  screentime.csv  │ ──► Pandas Data Pipeline (Filtering, KPIs, Grouping)
+└──────────────────┘                 │
+                                     ├──► Streamlit Dashboard (Metrics & Charts)
+                                     │
+                                     └──► Data Bridge (Category Aggregates)
+                                                │
+                                                ▼
+                                    ┌───────────────────────┐
+                                    │ Google Gemini 2.5     │
+                                    └───────────────────────┘
+                                       │                 │
+                                       ▼                 ▼
+                         Structured Wellness Report   Image Prompt
+                                       │                 │
+                                       ▼                 ▼
+                              Streamlit UI Cards   Pollinations AI
+                                                         │
+                                                         ▼
+                                                AI Wellbeing Avatar
 ```
 
 ---
 
-## Screenshots
+## Getting Started
 
-### Dashboard Home
-![Home](screenshots/home.png)
+### 1. Clone & Install Dependencies
 
-### AI Analysis Output
-![Analysis](screenshots/success.png)
+```bash
+git clone https://github.com/ShubhamSnSharma/mirai-ai-summer-internship-2026.git
+cd mirai-ai-summer-internship-2026/"Assignment 7"
+pip install streamlit pandas google-genai python-dotenv requests
+```
+
+### 2. Configure Environment
+
+Create a `.env` file in the project folder:
+```env
+GEMINI_API_KEY=your_google_gemini_api_key_here
+```
+
+### 3. Generate Sample Data (Optional)
+
+If `screentime.csv` is not present, generate realistic multi-week synthetic data:
+```bash
+python csv_generator.py
+```
+
+### 4. Launch the Dashboard
+
+```bash
+streamlit run assignment7.py
+```
+
+Open your browser at `http://localhost:8501`.
 
 ---
 
-*Built as part of the MirAI School of Technology Virtual Summer Internship 2026.*
+*Built as part of the MirAI School of Technology — Virtual Summer Internship 2026.*
