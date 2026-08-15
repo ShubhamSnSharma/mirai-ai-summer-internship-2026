@@ -77,3 +77,10 @@ streamlit run assignment5.py
 ---
 
 *Built as part of the MirAI School of Technology Virtual Summer Internship 2026.*
+
+---
+
+## Demo
+
+[▶ Watch Demo Video](demo.mov)
+
