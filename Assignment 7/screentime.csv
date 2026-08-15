@@ -1,0 +1,399 @@
+Date,Day,App_Name,Category,Minutes_Used
+2026-07-18,Saturday,Brave (Streaming),Entertainment,225
+2026-07-18,Saturday,YouTube,Entertainment,154
+2026-07-18,Saturday,ChatGPT,Education,139
+2026-07-18,Saturday,VS Code,Coding,129
+2026-07-18,Saturday,Brave (Research),Education,79
+2026-07-18,Saturday,Claude,Education,73
+2026-07-18,Saturday,Instagram,Social Media,58
+2026-07-18,Saturday,Gemini,Education,53
+2026-07-18,Saturday,Google Colab,Coding,51
+2026-07-18,Saturday,LinkedIn,Social Media,11
+2026-07-18,Saturday,Gmail,Productivity,11
+2026-07-18,Saturday,GitHub,Coding,9
+2026-07-18,Saturday,WhatsApp,Social Media,8
+2026-07-18,Saturday,Microsoft Teams,Communication,6
+2026-07-19,Sunday,Brave (Streaming),Entertainment,225
+2026-07-19,Sunday,YouTube,Entertainment,135
+2026-07-19,Sunday,ChatGPT,Education,126
+2026-07-19,Sunday,VS Code,Coding,88
+2026-07-19,Sunday,Brave (Research),Education,79
+2026-07-19,Sunday,Claude,Education,64
+2026-07-19,Sunday,Instagram,Social Media,55
+2026-07-19,Sunday,Gemini,Education,50
+2026-07-19,Sunday,GitHub,Coding,17
+2026-07-19,Sunday,WhatsApp,Social Media,16
+2026-07-19,Sunday,Gmail,Productivity,16
+2026-07-19,Sunday,LinkedIn,Social Media,9
+2026-07-20,Monday,VS Code,Coding,202
+2026-07-20,Monday,ChatGPT,Education,143
+2026-07-20,Monday,Brave (Research),Education,123
+2026-07-20,Monday,Zoom,Communication,90
+2026-07-20,Monday,Claude,Education,72
+2026-07-20,Monday,Instagram,Social Media,60
+2026-07-20,Monday,Gemini,Education,53
+2026-07-20,Monday,Brave (Streaming),Entertainment,42
+2026-07-20,Monday,YouTube,Entertainment,18
+2026-07-20,Monday,Gmail,Productivity,15
+2026-07-20,Monday,WhatsApp,Social Media,14
+2026-07-20,Monday,GitHub,Coding,13
+2026-07-20,Monday,LinkedIn,Social Media,12
+2026-07-21,Tuesday,VS Code,Coding,221
+2026-07-21,Tuesday,ChatGPT,Education,157
+2026-07-21,Tuesday,Brave (Research),Education,77
+2026-07-21,Tuesday,Claude,Education,70
+2026-07-21,Tuesday,Google Colab,Coding,68
+2026-07-21,Tuesday,Instagram,Social Media,63
+2026-07-21,Tuesday,Gemini,Education,58
+2026-07-21,Tuesday,Brave (Streaming),Entertainment,49
+2026-07-21,Tuesday,YouTube,Entertainment,26
+2026-07-21,Tuesday,GitHub,Coding,24
+2026-07-21,Tuesday,Gmail,Productivity,18
+2026-07-21,Tuesday,LinkedIn,Social Media,15
+2026-07-21,Tuesday,WhatsApp,Social Media,8
+2026-07-22,Wednesday,VS Code,Coding,242
+2026-07-22,Wednesday,ChatGPT,Education,179
+2026-07-22,Wednesday,Brave (Research),Education,90
+2026-07-22,Wednesday,Zoom,Communication,90
+2026-07-22,Wednesday,Claude,Education,87
+2026-07-22,Wednesday,Instagram,Social Media,56
+2026-07-22,Wednesday,Gemini,Education,50
+2026-07-22,Wednesday,Brave (Streaming),Entertainment,44
+2026-07-22,Wednesday,YouTube,Entertainment,35
+2026-07-22,Wednesday,GitHub,Coding,20
+2026-07-22,Wednesday,Google Docs,Productivity,20
+2026-07-22,Wednesday,WhatsApp,Social Media,18
+2026-07-22,Wednesday,LinkedIn,Social Media,12
+2026-07-22,Wednesday,Gmail,Productivity,11
+2026-07-23,Thursday,VS Code,Coding,255
+2026-07-23,Thursday,ChatGPT,Education,170
+2026-07-23,Thursday,Brave (Research),Education,114
+2026-07-23,Thursday,Claude,Education,72
+2026-07-23,Thursday,Gemini,Education,66
+2026-07-23,Thursday,Google Colab,Coding,64
+2026-07-23,Thursday,Instagram,Social Media,61
+2026-07-23,Thursday,Brave (Streaming),Entertainment,37
+2026-07-23,Thursday,GitHub,Coding,29
+2026-07-23,Thursday,YouTube,Entertainment,20
+2026-07-23,Thursday,WhatsApp,Social Media,18
+2026-07-23,Thursday,LinkedIn,Social Media,14
+2026-07-23,Thursday,Gmail,Productivity,12
+2026-07-24,Friday,VS Code,Coding,316
+2026-07-24,Friday,ChatGPT,Education,248
+2026-07-24,Friday,Brave (Research),Education,175
+2026-07-24,Friday,Claude,Education,99
+2026-07-24,Friday,Zoom,Communication,90
+2026-07-24,Friday,Gemini,Education,75
+2026-07-24,Friday,Instagram,Social Media,62
+2026-07-24,Friday,Brave (Streaming),Entertainment,38
+2026-07-24,Friday,GitHub,Coding,26
+2026-07-24,Friday,WhatsApp,Social Media,18
+2026-07-24,Friday,Google Docs,Productivity,18
+2026-07-24,Friday,YouTube,Entertainment,17
+2026-07-24,Friday,LinkedIn,Social Media,16
+2026-07-24,Friday,Gmail,Productivity,10
+2026-07-25,Saturday,Brave (Streaming),Entertainment,224
+2026-07-25,Saturday,YouTube,Entertainment,154
+2026-07-25,Saturday,ChatGPT,Education,143
+2026-07-25,Saturday,Claude,Education,91
+2026-07-25,Saturday,VS Code,Coding,91
+2026-07-25,Saturday,Brave (Research),Education,86
+2026-07-25,Saturday,Google Colab,Coding,68
+2026-07-25,Saturday,Instagram,Social Media,65
+2026-07-25,Saturday,Gemini,Education,48
+2026-07-25,Saturday,GitHub,Coding,30
+2026-07-25,Saturday,LinkedIn,Social Media,19
+2026-07-25,Saturday,Gmail,Productivity,12
+2026-07-25,Saturday,WhatsApp,Social Media,11
+2026-07-26,Sunday,Brave (Streaming),Entertainment,226
+2026-07-26,Sunday,YouTube,Entertainment,108
+2026-07-26,Sunday,ChatGPT,Education,106
+2026-07-26,Sunday,VS Code,Coding,80
+2026-07-26,Sunday,Brave (Research),Education,64
+2026-07-26,Sunday,Instagram,Social Media,59
+2026-07-26,Sunday,Claude,Education,55
+2026-07-26,Sunday,Gemini,Education,39
+2026-07-26,Sunday,GitHub,Coding,37
+2026-07-26,Sunday,Gmail,Productivity,20
+2026-07-26,Sunday,LinkedIn,Social Media,19
+2026-07-26,Sunday,WhatsApp,Social Media,16
+2026-07-27,Monday,VS Code,Coding,347
+2026-07-27,Monday,ChatGPT,Education,165
+2026-07-27,Monday,Brave (Research),Education,140
+2026-07-27,Monday,Claude,Education,98
+2026-07-27,Monday,Zoom,Communication,90
+2026-07-27,Monday,Gemini,Education,88
+2026-07-27,Monday,Instagram,Social Media,69
+2026-07-27,Monday,GitHub,Coding,36
+2026-07-27,Monday,Brave (Streaming),Entertainment,33
+2026-07-27,Monday,YouTube,Entertainment,24
+2026-07-27,Monday,LinkedIn,Social Media,17
+2026-07-27,Monday,WhatsApp,Social Media,16
+2026-07-27,Monday,Gmail,Productivity,14
+2026-07-28,Tuesday,VS Code,Coding,289
+2026-07-28,Tuesday,ChatGPT,Education,161
+2026-07-28,Tuesday,Brave (Research),Education,123
+2026-07-28,Tuesday,Claude,Education,108
+2026-07-28,Tuesday,Instagram,Social Media,55
+2026-07-28,Tuesday,Gemini,Education,55
+2026-07-28,Tuesday,Google Colab,Coding,54
+2026-07-28,Tuesday,Brave (Streaming),Entertainment,49
+2026-07-28,Tuesday,GitHub,Coding,44
+2026-07-28,Tuesday,LinkedIn,Social Media,22
+2026-07-28,Tuesday,YouTube,Entertainment,21
+2026-07-28,Tuesday,Gmail,Productivity,14
+2026-07-28,Tuesday,WhatsApp,Social Media,12
+2026-07-29,Wednesday,VS Code,Coding,247
+2026-07-29,Wednesday,ChatGPT,Education,213
+2026-07-29,Wednesday,Brave (Research),Education,111
+2026-07-29,Wednesday,Zoom,Communication,90
+2026-07-29,Wednesday,Claude,Education,79
+2026-07-29,Wednesday,Gemini,Education,57
+2026-07-29,Wednesday,Instagram,Social Media,55
+2026-07-29,Wednesday,Brave (Streaming),Entertainment,37
+2026-07-29,Wednesday,YouTube,Entertainment,33
+2026-07-29,Wednesday,GitHub,Coding,31
+2026-07-29,Wednesday,LinkedIn,Social Media,20
+2026-07-29,Wednesday,WhatsApp,Social Media,17
+2026-07-29,Wednesday,Google Docs,Productivity,16
+2026-07-29,Wednesday,Gmail,Productivity,14
+2026-07-29,Wednesday,Microsoft Teams,Communication,8
+2026-07-30,Thursday,VS Code,Coding,226
+2026-07-30,Thursday,ChatGPT,Education,174
+2026-07-30,Thursday,Brave (Research),Education,101
+2026-07-30,Thursday,Claude,Education,74
+2026-07-30,Thursday,Instagram,Social Media,59
+2026-07-30,Thursday,Brave (Streaming),Entertainment,59
+2026-07-30,Thursday,Google Colab,Coding,56
+2026-07-30,Thursday,Gemini,Education,53
+2026-07-30,Thursday,GitHub,Coding,38
+2026-07-30,Thursday,YouTube,Entertainment,32
+2026-07-30,Thursday,LinkedIn,Social Media,26
+2026-07-30,Thursday,Gmail,Productivity,19
+2026-07-30,Thursday,WhatsApp,Social Media,10
+2026-07-31,Friday,VS Code,Coding,293
+2026-07-31,Friday,ChatGPT,Education,231
+2026-07-31,Friday,Brave (Research),Education,114
+2026-07-31,Friday,Claude,Education,96
+2026-07-31,Friday,Zoom,Communication,90
+2026-07-31,Friday,Gemini,Education,70
+2026-07-31,Friday,Instagram,Social Media,66
+2026-07-31,Friday,Brave (Streaming),Entertainment,48
+2026-07-31,Friday,GitHub,Coding,34
+2026-07-31,Friday,YouTube,Entertainment,32
+2026-07-31,Friday,LinkedIn,Social Media,25
+2026-07-31,Friday,Google Docs,Productivity,18
+2026-07-31,Friday,WhatsApp,Social Media,15
+2026-07-31,Friday,Gmail,Productivity,11
+2026-08-01,Saturday,Brave (Streaming),Entertainment,185
+2026-08-01,Saturday,YouTube,Entertainment,162
+2026-08-01,Saturday,ChatGPT,Education,126
+2026-08-01,Saturday,VS Code,Coding,125
+2026-08-01,Saturday,Brave (Research),Education,78
+2026-08-01,Saturday,Claude,Education,59
+2026-08-01,Saturday,Instagram,Social Media,57
+2026-08-01,Saturday,Google Colab,Coding,56
+2026-08-01,Saturday,GitHub,Coding,43
+2026-08-01,Saturday,Gemini,Education,40
+2026-08-01,Saturday,WhatsApp,Social Media,18
+2026-08-01,Saturday,LinkedIn,Social Media,18
+2026-08-01,Saturday,Gmail,Productivity,11
+2026-08-02,Sunday,Brave (Streaming),Entertainment,204
+2026-08-02,Sunday,ChatGPT,Education,190
+2026-08-02,Sunday,YouTube,Entertainment,152
+2026-08-02,Sunday,VS Code,Coding,115
+2026-08-02,Sunday,Claude,Education,96
+2026-08-02,Sunday,Brave (Research),Education,84
+2026-08-02,Sunday,Instagram,Social Media,70
+2026-08-02,Sunday,Gemini,Education,55
+2026-08-02,Sunday,GitHub,Coding,50
+2026-08-02,Sunday,LinkedIn,Social Media,30
+2026-08-02,Sunday,WhatsApp,Social Media,11
+2026-08-02,Sunday,Gmail,Productivity,11
+2026-08-03,Monday,VS Code,Coding,299
+2026-08-03,Monday,ChatGPT,Education,208
+2026-08-03,Monday,Brave (Research),Education,178
+2026-08-03,Monday,Claude,Education,109
+2026-08-03,Monday,Zoom,Communication,90
+2026-08-03,Monday,Gemini,Education,89
+2026-08-03,Monday,Instagram,Social Media,56
+2026-08-03,Monday,GitHub,Coding,48
+2026-08-03,Monday,Brave (Streaming),Entertainment,36
+2026-08-03,Monday,LinkedIn,Social Media,29
+2026-08-03,Monday,YouTube,Entertainment,21
+2026-08-03,Monday,WhatsApp,Social Media,18
+2026-08-03,Monday,Gmail,Productivity,15
+2026-08-04,Tuesday,VS Code,Coding,262
+2026-08-04,Tuesday,ChatGPT,Education,189
+2026-08-04,Tuesday,Claude,Education,86
+2026-08-04,Tuesday,Brave (Research),Education,83
+2026-08-04,Tuesday,Gemini,Education,76
+2026-08-04,Tuesday,Instagram,Social Media,68
+2026-08-04,Tuesday,Google Colab,Coding,67
+2026-08-04,Tuesday,GitHub,Coding,46
+2026-08-04,Tuesday,YouTube,Entertainment,35
+2026-08-04,Tuesday,Brave (Streaming),Entertainment,31
+2026-08-04,Tuesday,LinkedIn,Social Media,24
+2026-08-04,Tuesday,Gmail,Productivity,17
+2026-08-04,Tuesday,WhatsApp,Social Media,10
+2026-08-05,Wednesday,VS Code,Coding,221
+2026-08-05,Wednesday,ChatGPT,Education,210
+2026-08-05,Wednesday,Brave (Research),Education,144
+2026-08-05,Wednesday,Claude,Education,110
+2026-08-05,Wednesday,Zoom,Communication,90
+2026-08-05,Wednesday,Instagram,Social Media,62
+2026-08-05,Wednesday,Gemini,Education,62
+2026-08-05,Wednesday,GitHub,Coding,50
+2026-08-05,Wednesday,Brave (Streaming),Entertainment,42
+2026-08-05,Wednesday,LinkedIn,Social Media,27
+2026-08-05,Wednesday,Google Docs,Productivity,21
+2026-08-05,Wednesday,Gmail,Productivity,16
+2026-08-05,Wednesday,YouTube,Entertainment,15
+2026-08-05,Wednesday,WhatsApp,Social Media,10
+2026-08-06,Thursday,VS Code,Coding,226
+2026-08-06,Thursday,ChatGPT,Education,214
+2026-08-06,Thursday,Brave (Research),Education,109
+2026-08-06,Thursday,Claude,Education,91
+2026-08-06,Thursday,GitHub,Coding,65
+2026-08-06,Thursday,Instagram,Social Media,64
+2026-08-06,Thursday,Gemini,Education,63
+2026-08-06,Thursday,Brave (Streaming),Entertainment,53
+2026-08-06,Thursday,Google Colab,Coding,51
+2026-08-06,Thursday,LinkedIn,Social Media,33
+2026-08-06,Thursday,YouTube,Entertainment,32
+2026-08-06,Thursday,WhatsApp,Social Media,14
+2026-08-06,Thursday,Gmail,Productivity,13
+2026-08-07,Friday,VS Code,Coding,228
+2026-08-07,Friday,ChatGPT,Education,215
+2026-08-07,Friday,Claude,Education,114
+2026-08-07,Friday,Brave (Research),Education,93
+2026-08-07,Friday,Zoom,Communication,90
+2026-08-07,Friday,Gemini,Education,62
+2026-08-07,Friday,Instagram,Social Media,56
+2026-08-07,Friday,GitHub,Coding,54
+2026-08-07,Friday,YouTube,Entertainment,34
+2026-08-07,Friday,Brave (Streaming),Entertainment,32
+2026-08-07,Friday,LinkedIn,Social Media,30
+2026-08-07,Friday,Gmail,Productivity,18
+2026-08-07,Friday,WhatsApp,Social Media,17
+2026-08-07,Friday,Google Docs,Productivity,16
+2026-08-08,Saturday,Brave (Streaming),Entertainment,216
+2026-08-08,Saturday,ChatGPT,Education,142
+2026-08-08,Saturday,YouTube,Entertainment,140
+2026-08-08,Saturday,VS Code,Coding,134
+2026-08-08,Saturday,Brave (Research),Education,75
+2026-08-08,Saturday,GitHub,Coding,69
+2026-08-08,Saturday,Instagram,Social Media,67
+2026-08-08,Saturday,Claude,Education,65
+2026-08-08,Saturday,Gemini,Education,59
+2026-08-08,Saturday,Google Colab,Coding,58
+2026-08-08,Saturday,LinkedIn,Social Media,33
+2026-08-08,Saturday,Gmail,Productivity,16
+2026-08-08,Saturday,WhatsApp,Social Media,9
+2026-08-09,Sunday,ChatGPT,Education,188
+2026-08-09,Sunday,Brave (Streaming),Entertainment,159
+2026-08-09,Sunday,Brave (Research),Education,123
+2026-08-09,Sunday,VS Code,Coding,118
+2026-08-09,Sunday,YouTube,Entertainment,101
+2026-08-09,Sunday,Claude,Education,84
+2026-08-09,Sunday,Gemini,Education,73
+2026-08-09,Sunday,Instagram,Social Media,65
+2026-08-09,Sunday,GitHub,Coding,63
+2026-08-09,Sunday,LinkedIn,Social Media,28
+2026-08-09,Sunday,Gmail,Productivity,14
+2026-08-09,Sunday,WhatsApp,Social Media,11
+2026-08-10,Monday,VS Code,Coding,282
+2026-08-10,Monday,ChatGPT,Education,220
+2026-08-10,Monday,Claude,Education,141
+2026-08-10,Monday,Brave (Research),Education,122
+2026-08-10,Monday,Zoom,Communication,90
+2026-08-10,Monday,Gemini,Education,80
+2026-08-10,Monday,GitHub,Coding,62
+2026-08-10,Monday,Instagram,Social Media,58
+2026-08-10,Monday,Brave (Streaming),Entertainment,41
+2026-08-10,Monday,LinkedIn,Social Media,33
+2026-08-10,Monday,YouTube,Entertainment,24
+2026-08-10,Monday,Gmail,Productivity,15
+2026-08-10,Monday,WhatsApp,Social Media,9
+2026-08-11,Tuesday,VS Code,Coding,280
+2026-08-11,Tuesday,ChatGPT,Education,236
+2026-08-11,Tuesday,Brave (Research),Education,156
+2026-08-11,Tuesday,Claude,Education,89
+2026-08-11,Tuesday,Gemini,Education,85
+2026-08-11,Tuesday,GitHub,Coding,78
+2026-08-11,Tuesday,Instagram,Social Media,64
+2026-08-11,Tuesday,Google Colab,Coding,58
+2026-08-11,Tuesday,LinkedIn,Social Media,38
+2026-08-11,Tuesday,Brave (Streaming),Entertainment,33
+2026-08-11,Tuesday,YouTube,Entertainment,19
+2026-08-11,Tuesday,Gmail,Productivity,18
+2026-08-11,Tuesday,WhatsApp,Social Media,17
+2026-08-11,Tuesday,Microsoft Teams,Communication,5
+2026-08-12,Wednesday,VS Code,Coding,346
+2026-08-12,Wednesday,ChatGPT,Education,242
+2026-08-12,Wednesday,Brave (Research),Education,184
+2026-08-12,Wednesday,Claude,Education,142
+2026-08-12,Wednesday,Zoom,Communication,90
+2026-08-12,Wednesday,Gemini,Education,86
+2026-08-12,Wednesday,GitHub,Coding,75
+2026-08-12,Wednesday,Instagram,Social Media,59
+2026-08-12,Wednesday,Brave (Streaming),Entertainment,45
+2026-08-12,Wednesday,LinkedIn,Social Media,36
+2026-08-12,Wednesday,YouTube,Entertainment,23
+2026-08-12,Wednesday,Gmail,Productivity,20
+2026-08-12,Wednesday,Google Docs,Productivity,15
+2026-08-12,Wednesday,WhatsApp,Social Media,12
+2026-08-12,Wednesday,Microsoft Teams,Communication,8
+2026-08-13,Thursday,VS Code,Coding,290
+2026-08-13,Thursday,ChatGPT,Education,167
+2026-08-13,Thursday,Brave (Research),Education,139
+2026-08-13,Thursday,Claude,Education,98
+2026-08-13,Thursday,GitHub,Coding,83
+2026-08-13,Thursday,Gemini,Education,63
+2026-08-13,Thursday,Instagram,Social Media,56
+2026-08-13,Thursday,Google Colab,Coding,50
+2026-08-13,Thursday,Brave (Streaming),Entertainment,43
+2026-08-13,Thursday,LinkedIn,Social Media,38
+2026-08-13,Thursday,YouTube,Entertainment,32
+2026-08-13,Thursday,Gmail,Productivity,17
+2026-08-13,Thursday,Microsoft Teams,Communication,10
+2026-08-13,Thursday,WhatsApp,Social Media,8
+2026-08-14,Friday,VS Code,Coding,246
+2026-08-14,Friday,ChatGPT,Education,226
+2026-08-14,Friday,Brave (Research),Education,122
+2026-08-14,Friday,Claude,Education,99
+2026-08-14,Friday,GitHub,Coding,91
+2026-08-14,Friday,Zoom,Communication,90
+2026-08-14,Friday,Gemini,Education,64
+2026-08-14,Friday,Instagram,Social Media,56
+2026-08-14,Friday,Brave (Streaming),Entertainment,41
+2026-08-14,Friday,LinkedIn,Social Media,33
+2026-08-14,Friday,Google Docs,Productivity,25
+2026-08-14,Friday,YouTube,Entertainment,21
+2026-08-14,Friday,Gmail,Productivity,15
+2026-08-14,Friday,WhatsApp,Social Media,13
+2026-08-15,Saturday,Brave (Streaming),Entertainment,172
+2026-08-15,Saturday,YouTube,Entertainment,142
+2026-08-15,Saturday,ChatGPT,Education,131
+2026-08-15,Saturday,VS Code,Coding,112
+2026-08-15,Saturday,Brave (Research),Education,79
+2026-08-15,Saturday,Claude,Education,75
+2026-08-15,Saturday,Instagram,Social Media,66
+2026-08-15,Saturday,Gemini,Education,65
+2026-08-15,Saturday,GitHub,Coding,65
+2026-08-15,Saturday,Google Colab,Coding,63
+2026-08-15,Saturday,LinkedIn,Social Media,43
+2026-08-15,Saturday,WhatsApp,Social Media,16
+2026-08-15,Saturday,Gmail,Productivity,12
+2026-08-16,Sunday,Brave (Streaming),Entertainment,208
+2026-08-16,Sunday,ChatGPT,Education,161
+2026-08-16,Sunday,YouTube,Entertainment,144
+2026-08-16,Sunday,Claude,Education,104
+2026-08-16,Sunday,Brave (Research),Education,93
+2026-08-16,Sunday,VS Code,Coding,88
+2026-08-16,Sunday,Gemini,Education,83
+2026-08-16,Sunday,GitHub,Coding,74
+2026-08-16,Sunday,Instagram,Social Media,62
+2026-08-16,Sunday,LinkedIn,Social Media,36
+2026-08-16,Sunday,Gmail,Productivity,17
+2026-08-16,Sunday,WhatsApp,Social Media,12

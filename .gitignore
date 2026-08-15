@@ -1,0 +1,37 @@
+# Ignore Raw Session & Draft Folders
+session1/
+session2/
+session3/
+session4/
+session5/
+session6/
+session7/
+session8/
+session9/
+session10/
+session-rest/
+assignments/
+mirai_offer-letter.pdf
+
+# Secrets and Keys
+.env
+*.env
+secrets.toml
+.streamlit/secrets.toml
+**/secrets.toml
+
+# Python Caches & Environments
+__pycache__/
+*.pyc
+.venv/
+venv/
+ENV/
+
+# System Files
+.DS_Store
+*.tmp
+*.log
+
+# Generated Output Documents
+output/
+*.pdf

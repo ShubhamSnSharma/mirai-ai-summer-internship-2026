@@ -1,0 +1,11 @@
+# Virtual Environment
+venv/
+__pycache__/
+*.pyc
+
+# Streamlit Secrets
+.streamlit/secrets.toml
+
+# Generated Files
+output/*.pdf
+output/*.docx
