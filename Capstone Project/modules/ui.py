@@ -86,119 +86,38 @@ def render_header() -> None:
 
 
 def render_sidebar() -> None:
-    """Renders an enterprise-grade sidebar organized into recruiter persona controls,
-    live workspace telemetry, academic evaluation matrix rubric, and tech specs
-    aligned with MirAI B.Tech Capstone guidelines.
-    """
-    analysis_complete = st.session_state.get("analysis_complete", False)
-    analysis_json = st.session_state.get("analysis_json")
-    resume_text = st.session_state.get("resume_text", "")
-    job_desc = st.session_state.get("job_description", "")
-    
-    r_words = count_words(resume_text)
-    j_words = count_words(job_desc)
-
+    """Renders a clean and simple sidebar with configuration settings and project details."""
     with st.sidebar:
-        # 1. Header & Brand Hero
-        st.markdown(f"## 📄 {APP_NAME}")
-        st.caption(f"{APP_SUBTITLE}")
+        st.header("⚙️ Configuration")
         
-        # Tags for AI Model & Problem Statement
-        st.markdown(
-            """
-            <div style="display:flex; gap:6px; flex-wrap:wrap; margin-bottom:12px;">
-                <span style="background-color:#0284C7; color:#FFFFFF; font-size:11px; padding:2px 8px; border-radius:12px; font-weight:600;">⚡ Gemini 2.5 Flash</span>
-                <span style="background-color:#4F46E5; color:#FFFFFF; font-size:11px; padding:2px 8px; border-radius:12px; font-weight:600;">Problem #17</span>
-                <span style="background-color:#059669; color:#FFFFFF; font-size:11px; padding:2px 8px; border-radius:12px; font-weight:600;">100/100 Rubric</span>
-            </div>
-            """,
-            unsafe_allow_html=True,
-        )
-        st.divider()
-
-        # 2. AI Recruiter Persona & Calibration (Interactive Controls)
-        st.markdown("#### 🎭 Evaluator Persona")
-        st.session_state["evaluator_persona"] = st.selectbox(
-            label="Evaluation Tone",
+        # 1. Review Style
+        st.selectbox(
+            "🎭 Review Persona",
             options=EVALUATOR_PERSONAS,
-            index=EVALUATOR_PERSONAS.index(st.session_state.get("evaluator_persona", EVALUATOR_PERSONAS[0]))
-            if st.session_state.get("evaluator_persona") in EVALUATOR_PERSONAS else 0,
-            help="Select the AI persona and roasting intensity for candidate review (Problem Statement #17).",
-            label_visibility="collapsed",
+            key="evaluator_persona",
+            help="Choose the tone of feedback (e.g. Roast Mode vs Balanced).",
         )
 
-        st.markdown("#### 🎯 Target Seniority Level")
-        st.session_state["target_seniority"] = st.selectbox(
-            label="Candidate Seniority",
+        # 2. Target Level
+        st.selectbox(
+            "🎯 Experience Level",
             options=SENIORITY_LEVELS,
-            index=SENIORITY_LEVELS.index(st.session_state.get("target_seniority", SENIORITY_LEVELS[1]))
-            if st.session_state.get("target_seniority") in SENIORITY_LEVELS else 1,
-            help="Calibrates ATS benchmark and grading rigor to target career stage.",
-            label_visibility="collapsed",
+            key="target_seniority",
+            help="Calibrates ATS benchmarks and critique rigor.",
         )
 
         st.divider()
 
-        # 3. Live Workspace Telemetry & Engine Status
-        st.markdown("#### 📡 System Telemetry")
-        
-        resume_status = f"✅ {r_words:,} words" if r_words > 0 else "⏳ Waiting for input"
-        job_status = f"✅ {j_words:,} words" if j_words > 0 else "⏳ Waiting for input"
+        # 3. About Project
+        st.header("📌 About")
+        st.write(
+            "**ResumeForge AI** evaluates software engineering resumes against target job descriptions, "
+            "identifying missing keywords, roasting weak bullet points, and generating ATS-optimized rewrites."
+        )
 
-        st.markdown(f"**Resume Data:** {resume_status}")
-        st.markdown(f"**Target Job:** {job_status}")
-        
-        if analysis_complete and analysis_json:
-            overall_score = analysis_json.get("scores", {}).get("overall_match_score", 0)
-            ats_status = "Excellent" if overall_score >= 80 else "Needs Work" if overall_score >= 60 else "Critical Rewrite"
-            st.markdown(
-                f"""
-                <div style="background:#0F172A; border:1px solid #38BDF8; border-radius:8px; padding:10px; margin-top:8px;">
-                    <div style="font-size:11px; color:#94A3B8; text-transform:uppercase; font-weight:700;">Evaluation Status</div>
-                    <div style="font-size:18px; font-weight:800; color:#38BDF8; margin-top:2px;">
-                        ATS Match: {overall_score}/100 <span style="font-size:12px; color:#A78BFA;">({ats_status})</span>
-                    </div>
-                </div>
-                """,
-                unsafe_allow_html=True,
-            )
-        else:
-            st.markdown(
-                """
-                <div style="background:#0F172A; border:1px dashed #334155; border-radius:8px; padding:8px; margin-top:6px; color:#94A3B8; font-size:12px; text-align:center;">
-                    Ready for Gemini 2.5 Evaluation
-                </div>
-                """,
-                unsafe_allow_html=True,
-            )
-
-        st.divider()
-
-        # 4. Academic Evaluation Matrix (100 Points Rubric)
-        with st.expander("📋 MirAI Capstone Rubric (100 Pts)", expanded=False):
-            st.caption("Official grading criteria for Problem Statement #17:")
-            total_pts = 0
-            for item in RUBRIC_BREAKDOWN:
-                total_pts += item["points"]
-                st.markdown(f"**{item['category']}** `({item['points']} pts)`")
-                st.caption(item["desc"])
-            st.caption(f"**Total Rubric Target:** {total_pts} / 100 Points")
-
-        st.divider()
-
-        # 5. Technology Stack & Specs
-        with st.expander("⚙️ Architecture & Tech Specs", expanded=False):
-            st.caption(
-                "• **AI Model:** Google Gemini 2.5 Flash\n"
-                "• **Data Contract:** JSON Schema v1.0\n"
-                "• **Data Analytics:** Pandas & Plotly Express\n"
-                "• **Document Export:** ReportLab PDF & python-docx\n"
-                "• **Frontend:** Streamlit 1.40+ (Native UI)\n"
-                "• **Runtime:** Python 3.10+"
-            )
-
-        # 6. Footer & Credits
-        st.caption("Built for **MirAI School of Technology** Capstone Showcase 2026.")
+        st.caption("• **Project:** Problem Statement #17 (Tech-Roast)")
+        st.caption("• **Engine:** Google Gemini 2.5 Flash")
+        st.caption("• **Track:** MirAI B.Tech Capstone 2026")
 
 
 def render_input_workspace() -> Tuple[str, str, bool, bool, bool]:

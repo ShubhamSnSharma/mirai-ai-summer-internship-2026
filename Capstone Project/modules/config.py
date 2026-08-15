@@ -39,17 +39,17 @@ DEFAULT_TEMPLATE: str = "modern_professional"
 
 # Evaluator Personas & Seniority Options (Problem Statement #17)
 EVALUATOR_PERSONAS: List[str] = [
-    "🌶️ Ruthless Tech Recruiter (Roast Mode)",
-    "👔 Senior Hiring Manager (Balanced Assessment)",
-    "🎯 ATS & Keyword Specialist (Strict Compliance)",
-    "🤝 Career Growth Coach (Constructive Mentorship)",
+    "🌶️ Ruthless Recruiter (Roast Mode)",
+    "👔 Hiring Manager (Balanced)",
+    "🎯 ATS Specialist (Keywords)",
+    "🤝 Career Coach (Friendly)",
 ]
 
 SENIORITY_LEVELS: List[str] = [
-    "Junior / Entry-Level (0-2 YOE)",
-    "Mid-Level Software Engineer (2-5 YOE)",
-    "Senior / Staff Engineer (5+ YOE)",
-    "Lead / Engineering Manager",
+    "Entry-Level (0-2 years)",
+    "Mid-Level (2-5 years)",
+    "Senior (5+ years)",
+    "Lead / Manager",
 ]
 
 # Development Checklist
