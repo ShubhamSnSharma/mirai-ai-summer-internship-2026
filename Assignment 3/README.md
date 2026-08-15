@@ -1,52 +1,65 @@
-# Assignment 3 — The Memory Vault (Stateful Chatbot)
+# 🌌 The AI Multiverse
 
-**Track:** MirAI School of Technology — Virtual Summer Internship 2026 (AI Builder)  
-**Deadline:** August 25, 2026, 11:59 PM  
-
----
-
-## Objective
-
-Upgrade the AI Multiverse chatbot from a **stateless** app (forgets everything on rerun) to a **stateful** app (remembers full conversation history) using Streamlit's `st.session_state`.
+> Chat with iconic fictional personalities powered by Google Gemini — stay in character, every time.
 
 ---
 
-## Tasks Completed
+## What It Does
 
-### Task 1 — Initialize the Memory Vault
-- Checks if `"messages"` exists in `st.session_state` at startup.
-- Initializes `st.session_state.messages = []` if not present.
+**The AI Multiverse** is an interactive chatbot web app where you can have real conversations with AI-powered versions of famous characters. Pick a personality from the sidebar and start chatting — the AI stays fully in character throughout the conversation.
 
-### Task 2 — Render the Chat History
-- `for` loop iterates through `st.session_state.messages`.
-- Each message rendered with `st.chat_message(role)` so history is redrawn on every rerun.
+**Available characters:**
+- 🟢 Master Yoda
+- 🔴 Deadpool
+- 🏴‍☠️ Captain Jack Sparrow
+- 🎤 Stand-up Comedian
+- 🕵️ Sherlock Holmes
 
-### Task 3 — Upgrade the Input UI
-- Replaced `st.text_input()` + `st.button("SEND")` with `st.chat_input("Say something...")`.
-- Used the walrus operator (`:=`) for single-line assignment and check.
-
-### Task 4 — Save New Messages to Memory
-- User message appended to `st.session_state.messages` as `{"role": "user", "content": user_message}`.
-- AI response appended as `{"role": "assistant", "content": response.text}`.
+The app remembers your full conversation history within a session, so responses feel natural and contextual. You can also clear the chat and start fresh anytime.
 
 ---
 
 ## Tech Stack
-- Python
-- Streamlit
-- Google Gemini API (`google-genai`)
-- python-dotenv
+
+| Tool | Purpose |
+|---|---|
+| [Streamlit](https://streamlit.io) | Web UI & session state |
+| [Google Gemini 2.5 Flash](https://ai.google.dev) | AI response generation |
+| [python-dotenv](https://pypi.org/project/python-dotenv/) | API key management |
 
 ---
 
-## Run Locally
+## Getting Started
 
+**1. Clone the repo and install dependencies:**
 ```bash
 pip install streamlit google-genai python-dotenv
-# Create a .env file with: GEMINI_API_KEY=your_key_here
+```
+
+**2. Set up your API key:**
+
+Create a `.env` file in the project root:
+```
+GEMINI_API_KEY=your_gemini_api_key_here
+```
+
+**3. Run the app:**
+```bash
 streamlit run assignment3.py
 ```
 
+Then open [http://localhost:8501](http://localhost:8501) in your browser.
+
 ---
 
-*Built as part of the MirAI School of Technology Virtual Summer Internship 2026.*
+## How It Works
+
+1. Select a character from the **sidebar**
+2. Type any message in the chat input
+3. Gemini generates a response fully in character
+4. Conversation history is preserved using `st.session_state`
+5. Hit **Clear Conversation** to start fresh
+
+---
+
+*Built as part of the MirAI School of Technology — Virtual Summer Internship 2026.*
