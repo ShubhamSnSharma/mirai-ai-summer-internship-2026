@@ -59,6 +59,17 @@ def sanitize_input_text(raw_text: str) -> str:
     return " ".join(raw_text.split())
 
 
+def _resolve_project_path(path: str) -> str:
+    """Resolves a file path relative to CWD or the Capstone Project directory."""
+    if os.path.exists(path):
+        return path
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    candidate = os.path.join(base_dir, path)
+    if os.path.exists(candidate):
+        return candidate
+    return path
+
+
 def load_sample_file(file_path: str) -> str:
     """Loads text content from a local sample data file safely.
 
@@ -68,10 +79,11 @@ def load_sample_file(file_path: str) -> str:
     Returns:
         Extracted text content or empty string if error occurs.
     """
-    if not os.path.exists(file_path):
+    resolved = _resolve_project_path(file_path)
+    if not os.path.exists(resolved):
         return ""
     try:
-        with open(file_path, "r", encoding="utf-8") as f:
+        with open(resolved, "r", encoding="utf-8") as f:
             return f.read().strip()
     except Exception:
         return ""
@@ -208,9 +220,10 @@ def load_mock_analysis(file_path: str = "data/mock_analysis.json") -> Dict[str, 
     Returns:
         Parsed JSON dictionary.
     """
-    if not os.path.exists(file_path):
-        raise FileNotFoundError(f"Mock analysis file not found at path: {file_path}")
-    with open(file_path, "r", encoding="utf-8") as f:
+    resolved = _resolve_project_path(file_path)
+    if not os.path.exists(resolved):
+        raise FileNotFoundError(f"Mock analysis file not found at path: {file_path} (resolved: {resolved})")
+    with open(resolved, "r", encoding="utf-8") as f:
         data = json.load(f)
         valid, msg = validate_analysis_schema(data)
         if not valid:
