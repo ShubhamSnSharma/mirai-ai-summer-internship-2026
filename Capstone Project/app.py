@@ -1,5 +1,5 @@
 """
-AI Resume Critic & Career Optimizer — Main Streamlit Application Entrypoint.
+ResumeForge AI — AI Resume Critic & Career Optimizer.
 
 B.Tech Capstone Project — MirAI School of Technology (Problem Statement #17)
 
@@ -98,11 +98,20 @@ def main() -> None:
                         st.write("📌 Preparing prompt and validating document inputs...")
                         st.write("🤖 Transmitting single-call request to Gemini 2.5 Flash model...")
                         
-                        analysis_dict = analyze_resume_with_gemini(cur_resume, cur_job, api_key=api_key)
+                        persona = st.session_state.get("evaluator_persona", "🌶️ Ruthless Tech Recruiter (Roast Mode)")
+                        seniority = st.session_state.get("target_seniority", "Mid-Level Software Engineer (2-5 YOE)")
+                        
+                        analysis_dict = analyze_resume_with_gemini(
+                            resume_text=cur_resume,
+                            job_description=cur_job,
+                            api_key=api_key,
+                            persona_tone=persona,
+                            seniority_level=seniority,
+                        )
                         
                         st.write("🔍 Cleaning response and performing deep schema validation...")
                         st.write("✅ Analysis JSON successfully validated!")
-                        status.update(label="Evaluation Complete!", state="complete", expanded=False)
+                        status.update(label=f"Evaluation Complete ({persona.split(' ')[0]} Mode)!", state="complete", expanded=False)
 
                     st.session_state["analysis_json"] = analysis_dict
                     st.session_state["analysis_complete"] = True

@@ -57,7 +57,11 @@ def resolve_api_key(passed_key: Optional[str] = None) -> Optional[str]:
 
 
 def analyze_resume_with_gemini(
-    resume_text: str, job_description: str, api_key: Optional[str] = None
+    resume_text: str,
+    job_description: str,
+    api_key: Optional[str] = None,
+    persona_tone: str = "🌶️ Ruthless Tech Recruiter (Roast Mode)",
+    seniority_level: str = "Mid-Level Software Engineer (2-5 YOE)",
 ) -> Dict[str, Any]:
     """Executes single-call Gemini API evaluation and validates structured JSON output.
 
@@ -65,6 +69,8 @@ def analyze_resume_with_gemini(
         resume_text: Clean candidate resume text.
         job_description: Target job description requirements text.
         api_key: Optional explicit API key string.
+        persona_tone: Selected recruiter personality mode.
+        seniority_level: Target seniority expectation.
 
     Returns:
         Validated candidate analysis dictionary.
@@ -90,8 +96,13 @@ def analyze_resume_with_gemini(
         raise ValueError("Gemini API key is not configured. Please add GEMINI_API_KEY to st.secrets or environment variables.")
 
     # 3. Construct Prompt Payload
-    logger.info("Constructing evaluation prompt for model: %s", DEFAULT_GEMINI_MODEL)
-    prompt = build_analysis_prompt(resume_text, job_description)
+    logger.info("Constructing evaluation prompt for model: %s (Persona: %s)", DEFAULT_GEMINI_MODEL, persona_tone)
+    prompt = build_analysis_prompt(
+        resume_text=resume_text,
+        job_description=job_description,
+        persona_tone=persona_tone,
+        seniority_level=seniority_level,
+    )
 
     # 4. Initialize Gemini SDK Client
     try:

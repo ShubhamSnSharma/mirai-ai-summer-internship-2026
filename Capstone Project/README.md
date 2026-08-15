@@ -1,21 +1,22 @@
-# 🚀 AI Resume Critic & Career Optimizer (Tech-Roast)
+# 🚀 ResumeForge AI — Recruiter-Grade Resume Intelligence & Career Optimizer
 
 ```text
 ===================================================================================
-   ___   ___   ___                                  ___    _ _  _     
-  / _ \ |_ _| | _ \___ ___ _  _ _ __  ___  ___ _ _ / __| _(_) |_(_)__ 
- | || |  | |  |   / -_)__ \ || | '  \/ -_) \__ \ '_| (__|  _| |  _| / _|
- |_||_| |___| |_|_\___|___/\_,_|_|_|_\___| |___/_|  \___|\__|_|\__|_\__|
+   ___                              ___                    _   ___ 
+  | _ \___ ___ _  _ _ __  ___      | __|__  _ _ __ _ ___  /_\ |_ _|
+  |   / -_)__ \ || | '  \/ -_)     | _/ _ \| '_/ _` / -_)/ _ \ | | 
+  |_|_\___|___/\_,_|_|_|_\___|     |_|\___/|_| \__, \___/_/ \_\___|
+                                               |___/               
 ===================================================================================
  [MirAI School of Technology] B.Tech Capstone Project — Problem Statement #17
- Status: Phase 1 — Production Foundation Built
+ Project: ResumeForge AI (AI Resume Critic & Career Optimizer)
 ===================================================================================
 ```
 
 ---
 
 ## 📌 Project Overview
-**The AI Resume Critic** is an enterprise-grade AI dashboard that acts as a ruthless Silicon Valley Tech Recruiter. It analyzes candidate resumes against target job descriptions, roasts weak bullet points, computes quantitative ATS match metrics, recommends line-by-line improvements, and exports polished resumes across multiple professional templates.
+**ResumeForge AI** is an enterprise-grade AI dashboard that acts as a ruthless Silicon Valley Tech Recruiter. It analyzes candidate resumes against target job descriptions, roasts weak bullet points, computes quantitative ATS match metrics, recommends line-by-line improvements, and exports polished resumes across multiple professional templates.
 
 > [!NOTE]
 > **Evaluation Rubric Target**: 100/100 Points (Technical Architecture, Gemini AI Prompting, UI/UX Visualization, Deployment Prep, Open-Source Branding, System Documentation).

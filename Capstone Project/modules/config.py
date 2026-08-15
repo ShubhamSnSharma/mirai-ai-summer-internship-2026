@@ -13,15 +13,15 @@ Architecture Role:
 from typing import Dict, List, Any
 
 # App Metadata
-APP_NAME: str = "AI Resume Critic"
-APP_SUBTITLE: str = "Recruiter-Grade Resume Analysis & Optimization Engine"
+APP_NAME: str = "ResumeForge AI"
+APP_SUBTITLE: str = "AI Resume Critic & Career Optimizer"
 APP_DESCRIPTION: str = (
     "An enterprise platform that evaluates software engineering resumes against target job descriptions. "
-    "Get recruiter-style feedback, line-by-line rewrite suggestions, ATS keyword gap analysis, and "
+    "Get recruiter-grade feedback, line-by-line rewrite suggestions, ATS keyword gap analysis, and "
     "downloadable templates."
 )
 APP_VERSION: str = "1.0.0-phase4"
-CAPSTONE_PROJECT_NAME: str = "MirAI Capstone Project — Problem Statement #17"
+CAPSTONE_PROJECT_NAME: str = "ResumeForge AI — MirAI Capstone Project (Problem Statement #17)"
 
 # File Paths
 SAMPLE_RESUME_PATH: str = "sample_data/sample_resume.txt"
@@ -37,6 +37,21 @@ MAX_OUTPUT_TOKENS: int = 8192
 SUPPORTED_EXPORTS: List[str] = ["PDF", "DOCX", "JSON"]
 DEFAULT_TEMPLATE: str = "modern_professional"
 
+# Evaluator Personas & Seniority Options (Problem Statement #17)
+EVALUATOR_PERSONAS: List[str] = [
+    "🌶️ Ruthless Tech Recruiter (Roast Mode)",
+    "👔 Senior Hiring Manager (Balanced Assessment)",
+    "🎯 ATS & Keyword Specialist (Strict Compliance)",
+    "🤝 Career Growth Coach (Constructive Mentorship)",
+]
+
+SENIORITY_LEVELS: List[str] = [
+    "Junior / Entry-Level (0-2 YOE)",
+    "Mid-Level Software Engineer (2-5 YOE)",
+    "Senior / Staff Engineer (5+ YOE)",
+    "Lead / Engineering Manager",
+]
+
 # Development Checklist
 PROGRESS_CHECKLIST: Dict[str, str] = {
     "Foundation": "Completed",
@@ -48,20 +63,46 @@ PROGRESS_CHECKLIST: Dict[str, str] = {
     "Export": "Completed",
 }
 
-# Evaluation Matrix Scoring Weights (100 Points Total)
-RUBRIC_SCORES: Dict[str, int] = {
-    "technical_architecture": 25,
-    "ai_integration_prompting": 20,
-    "ui_ux_visualization": 20,
-    "deployment_cloud": 15,
-    "opensource_branding": 10,
-    "system_design_docs": 10,
-}
+# MirAI Capstone Evaluation Matrix (100 Points Total)
+RUBRIC_BREAKDOWN: List[Dict[str, Any]] = [
+    {
+        "category": "1. Technical Architecture",
+        "points": 25,
+        "desc": "Modular architecture, st.session_state memory persistence, st.form API batching, zero runtime errors.",
+    },
+    {
+        "category": "2. AI Integration & Prompting",
+        "points": 20,
+        "desc": "Gemini 2.5 Flash API, system persona framing, single-call structured JSON contract, error boundaries.",
+    },
+    {
+        "category": "3. UI/UX & Data Visualization",
+        "points": 20,
+        "desc": "Wide SaaS layout, dynamic KPI deltas, Plotly radar & skill charts, tabbed deep-dive workspaces.",
+    },
+    {
+        "category": "4. Deployment & Cloud Prep",
+        "points": 15,
+        "desc": "Zero local dependencies in requirements.txt, Streamlit Cloud ready, environment secrets handling.",
+    },
+    {
+        "category": "5. Open-Source Branding",
+        "points": 10,
+        "desc": "Terminal-style README.md, comprehensive setup guide, ASCII banner, and public repository structure.",
+    },
+    {
+        "category": "6. System Design & Docs",
+        "points": 10,
+        "desc": "Mermaid data flow diagrams, technical design specifications, JSON data contract documentation.",
+    },
+]
 
 # Default Session State Schema Definitions
 INITIAL_SESSION_STATE: Dict[str, Any] = {
     "resume_text": "",
     "job_description": "",
+    "evaluator_persona": EVALUATOR_PERSONAS[0],
+    "target_seniority": SENIORITY_LEVELS[1],
     "analysis_complete": False,
     "analysis_json": None,
     "resume_scores": None,

@@ -28,18 +28,42 @@ STRICT OPERATIONAL RULES:
 """
 
 
-def build_analysis_prompt(resume_text: str, job_description: str) -> str:
+def build_analysis_prompt(
+    resume_text: str,
+    job_description: str,
+    persona_tone: str = "🌶️ Ruthless Tech Recruiter (Roast Mode)",
+    seniority_level: str = "Mid-Level Software Engineer (2-5 YOE)",
+) -> str:
     """Builds the complete single-request evaluation prompt for Gemini.
 
     Args:
         resume_text: Cleaned text extracted from candidate's resume.
         job_description: Target job description requirements text.
+        persona_tone: Selected recruiter personality / roasting mode.
+        seniority_level: Target seniority expectation for evaluation.
 
     Returns:
-        Formatted prompt string containing inputs and JSON schema.
+        Formatted prompt string containing inputs, persona framing, and JSON schema.
     """
+    persona_instruction = (
+        "Act as a ruthless Silicon Valley technical recruiter known for brutal honesty. "
+        "Zero sugarcoating. Ruthlessly call out weak metrics, vague buzzwords, passive voice, "
+        "and generic bullet points while providing sharp, quantitative rewrites."
+        if "Ruthless" in persona_tone
+        else "Act as a seasoned Senior Hiring Manager balancing candid critique with actionable, corporate-ready advice."
+        if "Senior Hiring" in persona_tone
+        else "Act as an ATS Compliance Specialist focusing strictly on keyword matching, parsing precision, and filtering thresholds."
+        if "ATS" in persona_tone
+        else "Act as an empathetic Career Growth Coach delivering empowering, high-impact suggestions."
+    )
+
     return f"""
 {SYSTEM_PROMPT}
+
+EVALUATOR PERSONA & CALIBRATION:
+- Selected Persona: {persona_tone}
+- Persona Style: {persona_instruction}
+- Target Seniority Level: {seniority_level} (Calibrate expectations and scoring strictly against this benchmark).
 
 TARGET JOB DESCRIPTION:
 =======================
