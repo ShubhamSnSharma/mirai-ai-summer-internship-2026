@@ -60,7 +60,7 @@ def analyze_resume_with_gemini(
     resume_text: str,
     job_description: str,
     api_key: Optional[str] = None,
-    persona_tone: str = "🌶️ Ruthless Tech Recruiter (Roast Mode)",
+    persona_tone: str = "Ruthless Tech Recruiter (Roast Mode)",
     seniority_level: str = "Mid-Level Software Engineer (2-5 YOE)",
 ) -> Dict[str, Any]:
     """Executes single-call Gemini API evaluation and validates structured JSON output.
