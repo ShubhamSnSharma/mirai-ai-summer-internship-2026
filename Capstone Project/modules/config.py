@@ -39,10 +39,10 @@ DEFAULT_TEMPLATE: str = "modern_professional"
 
 # Evaluator Personas & Seniority Options (Problem Statement #17)
 EVALUATOR_PERSONAS: List[str] = [
-    "🌶️ Ruthless Recruiter (Roast Mode)",
-    "👔 Hiring Manager (Balanced)",
-    "🎯 ATS Specialist (Keywords)",
-    "🤝 Career Coach (Friendly)",
+    "Ruthless Recruiter (Roast Mode)",
+    "Hiring Manager (Balanced)",
+    "ATS Specialist (Keywords)",
+    "Career Coach (Friendly)",
 ]
 
 SENIORITY_LEVELS: List[str] = [
