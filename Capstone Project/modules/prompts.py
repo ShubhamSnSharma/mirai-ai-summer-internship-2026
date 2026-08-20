@@ -31,7 +31,7 @@ STRICT OPERATIONAL RULES:
 def build_analysis_prompt(
     resume_text: str,
     job_description: str,
-    persona_tone: str = "🌶️ Ruthless Tech Recruiter (Roast Mode)",
+    persona_tone: str = "Ruthless Tech Recruiter (Roast Mode)",
     seniority_level: str = "Mid-Level Software Engineer (2-5 YOE)",
 ) -> str:
     """Builds the complete single-request evaluation prompt for Gemini.
