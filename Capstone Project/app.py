@@ -95,10 +95,10 @@ def main() -> None:
                 # Execute Live Gemini API Evaluation with Staged Loading Status
                 try:
                     with st.status("Executing Gemini 2.5 Flash Evaluation...", expanded=True) as status:
-                        st.write("📌 Preparing prompt and validating document inputs...")
-                        st.write("🤖 Transmitting single-call request to Gemini 2.5 Flash model...")
+                        st.write("Preparing prompt and validating document inputs...")
+                        st.write("Transmitting single-call request to Gemini 2.5 Flash model...")
                         
-                        persona = st.session_state.get("evaluator_persona", "🌶️ Ruthless Tech Recruiter (Roast Mode)")
+                        persona = st.session_state.get("evaluator_persona", "Ruthless Tech Recruiter (Roast Mode)")
                         seniority = st.session_state.get("target_seniority", "Mid-Level Software Engineer (2-5 YOE)")
                         
                         analysis_dict = analyze_resume_with_gemini(
@@ -110,7 +110,7 @@ def main() -> None:
                         )
                         
                         st.write("🔍 Cleaning response and performing deep schema validation...")
-                        st.write("✅ Analysis JSON successfully validated!")
+                        st.write("✔️ Analysis JSON successfully validated!")
                         status.update(label=f"Evaluation Complete ({persona.split(' ')[0]} Mode)!", state="complete", expanded=False)
 
                     st.session_state["analysis_json"] = analysis_dict
