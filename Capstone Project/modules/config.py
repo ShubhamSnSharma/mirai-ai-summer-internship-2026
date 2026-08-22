@@ -29,6 +29,7 @@ SAMPLE_JOB_DESC_PATH: str = "sample_data/sample_job_description.txt"
 
 # Gemini AI Model Configuration
 DEFAULT_GEMINI_MODEL: str = "gemini-2.5-flash"
+FALLBACK_GEMINI_MODELS: List[str] = ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-1.5-flash"]
 MAX_INPUT_CHARACTERS: int = 15000
 DEFAULT_TEMPERATURE: float = 0.2
 MAX_OUTPUT_TOKENS: int = 8192

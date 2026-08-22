@@ -105,30 +105,47 @@ def analyze_resume_with_gemini(
         seniority_level=seniority_level,
     )
 
-    # 4. Initialize Gemini SDK Client
-    try:
-        client = genai.Client(api_key=key)
-        config = types.GenerateContentConfig(
-            temperature=DEFAULT_TEMPERATURE,
-            max_output_tokens=MAX_OUTPUT_TOKENS,
-            response_mime_type="application/json",
-        )
+    # 4. Initialize Gemini SDK Client & Execute with Fallback Cascade
+    from modules.config import FALLBACK_GEMINI_MODELS
 
-        logger.info("Executing single-call Gemini 2.5 API request...")
-        response = client.models.generate_content(
-            model=DEFAULT_GEMINI_MODEL,
-            contents=prompt,
-            config=config,
-        )
+    client = genai.Client(api_key=key)
+    config = types.GenerateContentConfig(
+        temperature=DEFAULT_TEMPERATURE,
+        max_output_tokens=MAX_OUTPUT_TOKENS,
+        response_mime_type="application/json",
+    )
 
-        raw_output = response.text if hasattr(response, "text") and response.text else str(response)
-        logger.info("Received API response (%d bytes). Cleaning output...", len(raw_output))
+    models_to_try = [DEFAULT_GEMINI_MODEL] + [m for m in FALLBACK_GEMINI_MODELS if m != DEFAULT_GEMINI_MODEL]
+    raw_output = None
+    last_error = None
+    used_model = DEFAULT_GEMINI_MODEL
 
-    except Exception as e:
-        logger.exception("Gemini API execution failed with error: %s", str(e))
-        raise ValueError(f"Gemini API request failed: {str(e)}")
+    for model_name in models_to_try:
+        try:
+            logger.info("Executing single-call Gemini API request with model: %s...", model_name)
+            response = client.models.generate_content(
+                model=model_name,
+                contents=prompt,
+                config=config,
+            )
+            raw_output = response.text if hasattr(response, "text") and response.text else str(response)
+            if raw_output and raw_output.strip():
+                used_model = model_name
+                logger.info("Successfully received API response from %s (%d bytes).", model_name, len(raw_output))
+                break
+        except Exception as e:
+            last_error = e
+            logger.warning("Model %s failed with error: %s. Trying fallback model...", model_name, str(e))
+            time.sleep(0.8)
 
-    # 5. Clean & Extract JSON
+    if not raw_output or not raw_output.strip():
+        logger.exception("All Gemini model attempts failed. Last error: %s", str(last_error))
+        err_msg = str(last_error) if last_error else "Empty response from Gemini API"
+        if "429" in err_msg or "RESOURCE_EXHAUSTED" in err_msg:
+            raise ValueError("Google Gemini API rate limit / quota exceeded (HTTP 429). Please wait 10 seconds before retrying.")
+        raise ValueError(f"Gemini API request failed: {err_msg}")
+
+    # 5. Clean & Extract JSON with Self-Healing Normalization
     cleaned_json_text = clean_response(raw_output)
     
     try:
@@ -152,5 +169,6 @@ def analyze_resume_with_gemini(
     
     analysis_dict["metadata"]["analysis_timestamp"] = datetime.now(timezone.utc).isoformat()
     analysis_dict["metadata"]["processing_time_seconds"] = elapsed_time
+    analysis_dict["metadata"]["model"] = used_model
 
     return analysis_dict

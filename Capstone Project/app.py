@@ -119,9 +119,15 @@ def main() -> None:
                     st.rerun()
 
                 except Exception as e:
-                    st.error("Unable to analyze the resume. Please check your API key configuration and try again.")
-                    with st.expander("Offline Development Testing Mode"):
-                        st.caption("No API key configured? You can load pre-evaluated mock data to test the workspace.")
+                    err_msg = str(e)
+                    st.error(f"⚠️ Analysis Error: {err_msg}")
+                    if "429" in err_msg or "rate limit" in err_msg.lower() or "quota" in err_msg.lower():
+                        st.info("💡 **Tip:** Free tier Gemini API rate limits apply (~15 requests/min). Please wait a few seconds and try analyzing again.")
+                    elif "api key" in err_msg.lower() or "permission" in err_msg.lower():
+                        st.info("💡 **Tip:** Please ensure your `GEMINI_API_KEY` is active and configured correctly in Streamlit Secrets or your `.env` file.")
+                    
+                    with st.expander("Offline Testing Mode (Explore Dashboard Without API)"):
+                        st.caption("You can load pre-evaluated mock data to test the complete workspace without API calls.")
                         if st.button("Load Pre-evaluated Mock Analysis"):
                             mock_data = load_mock_analysis("data/mock_analysis.json")
                             st.session_state["analysis_json"] = mock_data
