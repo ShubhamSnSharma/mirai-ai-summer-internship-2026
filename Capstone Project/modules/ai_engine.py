@@ -12,6 +12,7 @@ Architecture Role:
 import logging
 import os
 import time
+from datetime import datetime, timezone
 from typing import Dict, Any, Optional
 import streamlit as st
 
@@ -145,8 +146,11 @@ def analyze_resume_with_gemini(
     elapsed_time = round(time.time() - start_time, 2)
     logger.info("Analysis completed and validated successfully in %.2f seconds.", elapsed_time)
 
-    # Inject runtime processing time metadata
-    if "metadata" in analysis_dict and isinstance(analysis_dict["metadata"], dict):
-        analysis_dict["metadata"]["processing_time_seconds"] = elapsed_time
+    # Inject dynamic runtime timestamp and processing time metadata
+    if "metadata" not in analysis_dict or not isinstance(analysis_dict["metadata"], dict):
+        analysis_dict["metadata"] = {}
+    
+    analysis_dict["metadata"]["analysis_timestamp"] = datetime.now(timezone.utc).isoformat()
+    analysis_dict["metadata"]["processing_time_seconds"] = elapsed_time
 
     return analysis_dict

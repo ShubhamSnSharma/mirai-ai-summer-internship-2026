@@ -10,6 +10,7 @@ Architecture Role:
     Decouples UI rendering logic from app.py, consuming centralized template metadata dynamically.
 """
 
+from datetime import datetime, timezone
 from typing import Dict, Any, Tuple
 import streamlit as st
 
@@ -214,7 +215,12 @@ def render_context_header(analysis: Dict[str, Any]) -> None:
     c_name = candidate.get("name", "Candidate")
     j_role = job.get("role", "Target Role")
     j_company = job.get("company", "")
-    date_str = metadata.get("analysis_timestamp", "2026-08-14")[:10]
+    
+    raw_timestamp = metadata.get("analysis_timestamp")
+    if raw_timestamp and isinstance(raw_timestamp, str) and len(raw_timestamp) >= 10:
+        date_str = raw_timestamp[:10]
+    else:
+        date_str = datetime.now().strftime("%Y-%m-%d")
 
     col1, col2, col3, col4 = st.columns(4)
 

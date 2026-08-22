@@ -10,6 +10,7 @@ import html
 import io
 import logging
 import re
+from datetime import datetime, timezone
 from typing import Dict, Any, Optional, Tuple
 import streamlit as st
 
@@ -84,7 +85,13 @@ def build_pdf_summary_page(analysis_data: Dict[str, Any], styles: Any, options: 
     
     story.append(Paragraph("AI Resume Analysis Executive Report", title_style))
     story.append(Paragraph(f"Candidate: <b>{c_name}</b> | Target Role: <b>{j_role} ({j_company})</b>", styles["Normal"]))
-    story.append(Paragraph(f"Analysis Date: {metadata.get('analysis_timestamp', '')[:10]} | Engine: {model_name}", styles["Normal"]))
+    raw_timestamp = metadata.get('analysis_timestamp')
+    if raw_timestamp and isinstance(raw_timestamp, str) and len(raw_timestamp) >= 10:
+        analysis_date = raw_timestamp[:10]
+    else:
+        analysis_date = datetime.now().strftime("%Y-%m-%d")
+
+    story.append(Paragraph(f"Analysis Date: {analysis_date} | Engine: {model_name}", styles["Normal"]))
     story.append(Spacer(1, 12))
     story.append(HRFlowable(width="100%", thickness=1, color=colors.HexColor("#CBD5E1"), spaceAfter=15))
 

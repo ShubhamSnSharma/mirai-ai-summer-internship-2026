@@ -12,6 +12,7 @@ Architecture Role:
 import json
 import os
 import re
+from datetime import datetime, timezone
 from typing import Any, Dict, Optional, Tuple
 
 from modules.schema import REQUIRED_ROOT_KEYS
@@ -228,6 +229,9 @@ def load_mock_analysis(file_path: str = "data/mock_analysis.json") -> Dict[str, 
         valid, msg = validate_analysis_schema(data)
         if not valid:
             raise ValueError(f"Mock analysis schema invalid: {msg}")
+        # Dynamically set timestamp to current runtime
+        if "metadata" in data and isinstance(data["metadata"], dict):
+            data["metadata"]["analysis_timestamp"] = datetime.now(timezone.utc).isoformat()
         return data
 
 

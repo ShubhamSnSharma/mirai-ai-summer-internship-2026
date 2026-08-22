@@ -10,6 +10,7 @@ Architecture Role:
     for single-call structured AI evaluation.
 """
 
+from datetime import datetime, timezone
 from modules.schema import ANALYSIS_JSON_SCHEMA
 
 # Persona & Instruction System Prompt
@@ -57,6 +58,8 @@ def build_analysis_prompt(
         else "Act as an empathetic Career Growth Coach delivering empowering, high-impact suggestions."
     )
 
+    current_date_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
     return f"""
 {SYSTEM_PROMPT}
 
@@ -64,6 +67,7 @@ EVALUATOR PERSONA & CALIBRATION:
 - Selected Persona: {persona_tone}
 - Persona Style: {persona_instruction}
 - Target Seniority Level: {seniority_level} (Calibrate expectations and scoring strictly against this benchmark).
+- Current Evaluation Date: {current_date_str}
 
 TARGET JOB DESCRIPTION:
 =======================
