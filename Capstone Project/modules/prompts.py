@@ -26,6 +26,9 @@ STRICT OPERATIONAL RULES:
 5. Provide actionable line-by-line feedback and concrete rewrites.
 6. Output MUST be ONLY valid JSON matching the exact JSON schema provided below.
 7. Do NOT enclose the response in markdown code blocks, do NOT add leading or trailing text, explanations, or commentary outside the JSON object.
+8. CRITICAL: Any quotes inside text values MUST be escaped as \\" or replaced with single quotes.
+9. Keep bullet points, summaries, and critiques crisp and concise to ensure a complete, valid JSON output.
+10. Do NOT include trailing commas.
 """
 
 

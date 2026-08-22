@@ -300,34 +300,63 @@ def extract_json(cleaned_text: str) -> Dict[str, Any]:
     if not text:
         raise ValueError("Cannot extract JSON from empty response.")
     
-    # 1. Standard json.loads
+    # 1. Standard json.loads with strict=False (allows control chars / newlines)
     try:
-        data = json.loads(text)
+        data = json.loads(text, strict=False)
         if isinstance(data, dict):
             return normalize_and_repair_analysis(data)
     except Exception:
         pass
 
-    # 2. Repair trailing commas and brackets
+    # 2. Repair trailing commas and strict=False
     try:
         repaired = repair_json_string(text)
-        data = json.loads(repaired)
+        data = json.loads(repaired, strict=False)
         if isinstance(data, dict):
             return normalize_and_repair_analysis(data)
     except Exception:
         pass
 
     # 3. Extract substring between first '{' and last '}'
-    try:
-        start_idx = text.find("{")
-        end_idx = text.rfind("}")
-        if start_idx != -1 and end_idx != -1 and end_idx > start_idx:
+    start_idx = text.find("{")
+    end_idx = text.rfind("}")
+    if start_idx != -1 and end_idx != -1 and end_idx > start_idx:
+        try:
             substring = repair_json_string(text[start_idx : end_idx + 1])
-            data = json.loads(substring)
+            data = json.loads(substring, strict=False)
             if isinstance(data, dict):
                 return normalize_and_repair_analysis(data)
-    except Exception as e:
-        raise ValueError(f"JSON syntax parsing error: {str(e)}")
+        except Exception:
+            pass
+
+    # 4. Advanced recovery for truncated JSON or unclosed brackets/quotes
+    t_clean = text.strip()
+    if start_idx != -1:
+        t_clean = t_clean[start_idx:]
+    
+    # Scan backward from end of string to find last salvageable JSON boundary
+    max_lookback = min(len(t_clean), 3000)
+    for i in range(len(t_clean), len(t_clean) - max_lookback, -1):
+        candidate = t_clean[:i].rstrip()
+        if candidate.endswith(","):
+            candidate = candidate[:-1]
+        
+        # Balance quotes if odd
+        if candidate.count('"') % 2 != 0:
+            candidate += '"'
+        
+        # Balance brackets and braces
+        open_brackets = candidate.count("[") - candidate.count("]")
+        open_braces = candidate.count("{") - candidate.count("}")
+        if open_brackets >= 0 and open_braces >= 0:
+            closed = candidate + ("]" * open_brackets) + ("}" * open_braces)
+            closed = re.sub(r",\s*([}\]])", r"\1", closed)
+            try:
+                data = json.loads(closed, strict=False)
+                if isinstance(data, dict) and len(data) > 0:
+                    return normalize_and_repair_analysis(data)
+            except Exception:
+                continue
 
     raise ValueError("Extracted JSON root is not an object/dictionary.")
 
